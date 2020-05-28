@@ -26,3 +26,9 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+function addDate(){
+    const date = new Date();
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = date;
+ 
+}
