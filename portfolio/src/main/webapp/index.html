@@ -2,16 +2,29 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Emma Paczkowski's Portfolio</title>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="header">
-   <h1>Emma Paczkowski's Portfolio</h1>
-    <p>Welcome to my portfolio.  Here you can find more infomation about my interests, hobbies and other fun facts about me!</p>
-      </div>
-      <div id="content">
+
+   <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">About </a>
+  <a href="#" class="w3-bar-item w3-button">Interests</a>
+  <a href="#" class="w3-bar-item w3-button">Hobbies</a>
+</div> 
+
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>Emma Paczkowski's Portfolio</h1>
+  </div>
+</div>
+
+ <div id="content">
       <h1>Emma Paczkowski's Portfolio</h1>
       <img src="/images/emmaLn.jpg" alt="Emma" width="500" height="600">
       <p>Hello, this is my portfolio.</p>
@@ -21,12 +34,8 @@
       <p>Click here to get the date:</p>
       <button onclick="addDate()">Date</button>
       <div id="date-container"></div>
-    </div>
-    <div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#interests">Interests</a>
-  <a href="#hobbies">Hobbies</a>
-  <a href="#contact">Contact</a>
-    </div>
-  </body>
-</html>
+    </div> 
+
+
+</body>
+<html>
