@@ -20,6 +20,7 @@ p1 {
 }
 
 h1 {
+  text-align: left;
   font-size: 40px;
 }
 
@@ -72,6 +73,10 @@ h6 {
   font-size: 28px; /* Increased text to enable scrolling */  
   margin-left: 160px; /* Same as the width of the sidenav */
   padding: 0px 10px;
+}
+
+.header {
+    text-align: left;
 }
 
 @media screen and (max-height: 450px) {
