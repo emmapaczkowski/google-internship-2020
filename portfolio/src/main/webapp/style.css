@@ -11,7 +11,7 @@
 body {
   font-family: "Lato", sans-serif;
   color: black;
-  text-align: left;
+  text-align: center;
 }
 
 p1 {
@@ -86,6 +86,10 @@ h6 {
   width: 33.33%;
 }
 
+#myDIV {
+    display: none;
+}
+
 /* Clear floats after image containers */
 .row::after {
   clear: both;
@@ -116,4 +120,12 @@ h6 {
   content: "";
   clear: both;
   display: table;
+}
+
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
 }

@@ -28,9 +28,9 @@ function addRandomGreeting() {
 }
 
 function addDate() {
-    const date = new Date();
-    const dateContainer = document.getElementById('date-container');
-    dateContainer.innerText = date;
+  const date = new Date();
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = date;
 }
 
 function openSidebar() {
@@ -39,4 +39,13 @@ function openSidebar() {
 
 function closeSidebar() {
   document.getElementById("mySidebar").style.display = "none";
+}
+
+function displayImage() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
