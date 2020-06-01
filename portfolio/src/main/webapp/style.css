@@ -1,4 +1,5 @@
 #content {
+    background-color: #c5cbe3;
   margin-left: auto;
   margin-right: auto;
   width: 850px;
@@ -46,7 +47,7 @@ h6 {
 }
 
 .sidenav {
-  background-color: #111;
+  background-color: #563838;
   height: 100%;
   left: 0;
   overflow-x: hidden;
@@ -58,7 +59,7 @@ h6 {
 }
  
 .sidenav a {
-  color: #818181;
+  color: #f1e0d6;
   display: block;
   font-size: 25px;
   padding: 6px 8px 6px 16px;
@@ -76,6 +77,7 @@ h6 {
 }
 
 .header {
+    colour: #a7414a;
     text-align: left;
 }
 
@@ -103,7 +105,7 @@ h6 {
 }
 
 .footer {
-  background-color: green;
+  background-color:#a7414a;
   bottom: 0;
   color: white;
   height: 5%;
@@ -131,6 +133,6 @@ h6 {
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background-color: lightblue;
+  background-color: #6a8a82;
   margin-top: 20px;
 }
