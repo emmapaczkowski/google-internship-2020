@@ -1,7 +1,7 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 850px;
 }
  
 #greeting-container {
@@ -10,14 +10,13 @@
 
 body {
   font-family: "Lato", sans-serif;
-
   color: black;
   text-align: left;
 }
 
 p1 {
-    text-align: center;
     font-size: 1.875em;
+    text-align: center;
 }
 
 h1 {
@@ -37,6 +36,12 @@ h4 {
 h5 {
   font-size: 15px;
   text-align: left;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .sidenav {
@@ -85,5 +90,30 @@ h5 {
 .row::after {
   clear: both;
   content: "";
+  display: table;
+}
+
+.footer {
+  background-color: green;
+  bottom: 0;
+  color: white;
+  height: 5%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
   display: table;
 }
