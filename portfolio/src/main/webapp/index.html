@@ -4,91 +4,79 @@
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
-
-   <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button">About </a>
-  <a href="#" class="w3-bar-item w3-button">Interests</a>
-  <a href="#" class="w3-bar-item w3-button">Hobbies</a>
-</div> 
-
-<div class="w3-teal">
-  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-  <div class="w3-container">
-    <h1>Emma Paczkowski's Portfolio</h1>
-  </div>
-</div>
-
- <div id="content">
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+      <button onclick="closeSidebar()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="#" class="w3-bar-item w3-button">About </a>
+      <a href="#" class="w3-bar-item w3-button">Interests</a>
+      <a href="#" class="w3-bar-item w3-button">Hobbies</a>
+    </div> 
+      <div class="w3-teal">
+      <button class="w3-button w3-teal w3-xlarge" onclick="openSidebar()">☰</button>
+      <div class="w3-container">
+      <h1>Emma Paczkowski's Portfolio</h1>
+    </div>
+    </div>
+      <div id="content">
       <h2>Emma Paczkowski's Portfolio</h2>
       <img src="/images/emmaLn.jpg" alt="Emma" width="500" height="600">
       <p>Hello, this is my portfolio.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <div id="greeting-container">
+    </div>
       <p>Click here to get the date:</p>
       <button onclick="addDate()">Date</button>
-      <div id="date-container"></div>
+      <div id="date-container">
+    </div>
       <h3>About</h3>
-      <p1> These are the different places I have lived<p1>
-        <div class="row">
-        <div class="column">
-            <div class="w3-card-4" style="width:100%;">
-                <header class="w3-container w3-blue">
-                <h4>Canmore, Alberta<h4>
-                </header>
-
-                <div class="w3-container">
-               <img src="/images/canmore.jpg" alt="Canmore" style="width:100%">
-                </div>
-
-                <footer class="w3-container w3-blue">
-                <h5>I lived here from I was two and after I was 5. (2000-2002, 2006-2020)<h5>
-                </footer>
-        </div>
-        </div>
-
-        <div class="column">
-        <div class="w3-card-4" style="width:100%;">
-                <header class="w3-container w3-blue">
-                <h4>Kamchatka, Russia</h4>
-                </header>
-
-                <div class="w3-container">
-               <img src="/images/russia.jpg" alt="Russia" style="width:100%">
-                </div>
-
-                <footer class="w3-container w3-blue">
-                <h5>I lived here from the age of 2 to 5. (2002-2006)<h5>
-                </footer>
-        
-        </div>
-        </div>
-        <div class="column">
-            <div class="w3-card-4" style="width:100%;">
-                <header class="w3-container w3-blue">
-                <h4>Kingston, Ontario</h4>
-                </header>
-
-                <div class="w3-container">
-               <img src="/images/kingston.jpeg" alt="Kingston" style="width:100%">
-                </div>
-
-                <footer class="w3-container w3-blue">
-                <h5>Since 2018 I have lived here while I attend university.(2018-2020)<h5>
-                </footer>
-        </div>
-        </div>
-        &nbsp;&nbsp; 
-      <h3>Interests</h3>
-      
-      <h3>Hobbies</h3>
-      
-
+      <p1> These are the different places I have lived<p1> 
+      <div class="row">
+      <div class="column">
+      <div class="w3-card-4" style="width:100%;">
+      <header class="w3-container w3-blue">
+      <h4>Canmore, Alberta<h4>
+      </header>
+      <div class="w3-container">
+      <img src="/images/canmore.jpg" alt="Canmore" style="width:100%">
+    </div>
+      <footer class="w3-container w3-blue">
+      <h5>I lived here from I was two and after I was 5. (2000-2002, 2006-2020)<h5>
+      </footer>
+    </div>
+    </div>
+      <div class="column">
+      <div class="w3-card-4" style="width:100%;">
+      <header class="w3-container w3-blue">
+      <h4>Kamchatka, Russia</h4>
+      </header>
+      <div class="w3-container">
+      <img src="/images/russia.jpg" alt="Russia" style="width:100%">
+    </div>
+      <footer class="w3-container w3-blue">
+      <h5>I lived here from the age of 2 to 5. (2002-2006)<h5>
+      </footer>
+    </div>
+    </div>
+      <div class="column">
+      <div class="w3-card-4" style="width:100%;">
+      <header class="w3-container w3-blue">
+      <h4>Kingston, Ontario</h4>
+      </header>
+      <div class="w3-container">
+      <img src="/images/kingston.jpeg" alt="Kingston" style="width:100%">
+    </div>
+      <footer class="w3-container w3-blue">
+      <h5>Since 2018 I have lived here while I attend university.(2018-2020)<h5>
+      </footer>
+    </div>
+    </div>
+    &nbsp;&nbsp; 
+    <h3>Interests</h3>
+    <h3>Hobbies</h3>
 </body>
 <html>

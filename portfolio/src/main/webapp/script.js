@@ -26,18 +26,17 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
-function addDate(){
+
+function addDate() {
     const date = new Date();
     const dateContainer = document.getElementById('date-container');
     dateContainer.innerText = date;
 }
 
-function w3_open() {
+function openSidebar() {
   document.getElementById("mySidebar").style.display = "block";
 }
 
-function w3_close() {
+function closeSidebar() {
   document.getElementById("mySidebar").style.display = "none";
 }
-
- 
