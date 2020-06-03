@@ -10,19 +10,19 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
   color: black;
+  font-family: "Lato", sans-serif;
   text-align: center;
 }
 
 p1 {
-    font-size: 1.875em;
-    text-align: center;
+  font-size: 1.875em;
+  text-align: center;
 }
 
 h1 {
-  text-align: left;
   font-size: 40px;
+  text-align: left;
 }
 
 h3 {
@@ -77,8 +77,8 @@ h6 {
 }
 
 .header {
-    colour: #a7414a;
-    text-align: left;
+  colour: #a7414a;
+  text-align: left;
 }
 
 @media screen and (max-height: 450px) {
@@ -91,10 +91,6 @@ h6 {
   float: left;
   padding: 5px;
   width: 33.33%;
-}
-
-#myDIV {
-    display: none;
 }
 
 /* Clear floats after image containers */
@@ -118,21 +114,25 @@ h6 {
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
   float: left;
-  width: 33.33%;
   padding: 5px;
+  width: 33.33%;
 }
 
 /* Clear floats after image containers */
 .row::after {
-  content: "";
   clear: both;
+  content: "";
   display: table;
 }
 
 #myDIV {
-  width: 100%;
-  padding: 50px 0;
-  text-align: center;
+  display: none;
+}
+
+#myDIV {
   background-color: #6a8a82;
   margin-top: 20px;
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
 }

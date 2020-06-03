@@ -1,0 +1,13 @@
+repos:
+- repo: https://github.com/prettier/prettier
+  rev: "" 
+  hooks:
+   - id: prettier
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v1.2.3
+  hooks:
+    -  id: trailing-whitespace
+    -  id: csslint
+    -  id: jsint
+    -  id: scss-lint-scss_lint
+    
