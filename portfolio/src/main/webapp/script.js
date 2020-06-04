@@ -11,25 +11,29 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
- 
+
 /**
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
- 
+  const greetings = [
+    "Hello world!",
+    "¡Hola Mundo!",
+    "你好，世界！",
+    "Bonjour le monde!",
+  ];
+
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
- 
+
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
+  const greetingContainer = document.getElementById("greeting-container");
   greetingContainer.innerText = greeting;
 }
 
 function addDate() {
   const date = new Date();
-  const dateContainer = document.getElementById('date-container');
+  const dateContainer = document.getElementById("date-container");
   dateContainer.innerText = date;
 }
 
@@ -48,4 +52,9 @@ function displayImage() {
   } else {
     x.style.display = "none";
   }
+}
+
+function hideImage() {
+  var x = document.getElementById("myDIV");
+  x.style.display = "block";
 }

@@ -4,7 +4,7 @@
   margin-right: auto;
   width: 850px;
 }
- 
+
 #greeting-container {
   margin-top: 20px;
 }
@@ -55,23 +55,23 @@ h6 {
   position: fixed;
   top: 0;
   width: 160px;
-  z-index: 1; 
+  z-index: 1;
 }
- 
+
 .sidenav a {
   color: #f1e0d6;
   display: block;
   font-size: 25px;
   padding: 6px 8px 6px 16px;
-  text-decoration: none; 
+  text-decoration: none;
 }
- 
+
 .sidenav a:hover {
   color: #f1f1f1;
 }
- 
+
 .main {
-  font-size: 28px; /* Increased text to enable scrolling */  
+  font-size: 28px; /* Increased text to enable scrolling */
   margin-left: 160px; /* Same as the width of the sidenav */
   padding: 0px 10px;
 }
@@ -82,8 +82,12 @@ h6 {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -101,7 +105,7 @@ h6 {
 }
 
 .footer {
-  background-color:#a7414a;
+  background-color: #a7414a;
   bottom: 0;
   color: white;
   height: 5%;
@@ -125,11 +129,7 @@ h6 {
   display: table;
 }
 
-#myDIV {
-  display: none;
-}
-
-#myDIV {
+#fav_animal {
   background-color: #6a8a82;
   margin-top: 20px;
   padding: 50px 0;
