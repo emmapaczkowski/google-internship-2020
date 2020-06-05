@@ -46,7 +46,7 @@ function closeSidebar() {
 }
 
 function displayImage() {
-  var x = document.getElementById("myDIV");
+  var x = document.getElementById("fav_animal");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -55,6 +55,6 @@ function displayImage() {
 }
 
 function hideImage() {
-  var x = document.getElementById("myDIV");
+  var x = document.getElementById("fav_animal");
   x.style.display = "block";
 }
