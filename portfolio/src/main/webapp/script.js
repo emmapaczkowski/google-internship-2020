@@ -56,3 +56,12 @@ function hideImage() {
   var x = document.getElementById("fav_animal");
   x.style.display = "block";
 }
+
+/** Adds text form DataServlet to the webpage using arrow */
+function getText() {
+  fetch("/data")
+    .then((response) => response.text())
+    .then((text) => {
+      document.getElementById("name-container").innerText = text;
+    });
+}
