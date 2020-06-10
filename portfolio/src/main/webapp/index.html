@@ -1,156 +1,157 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Emma Paczkowski</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div
-      class="w3-sidebar w3-bar-block w3-border-right"
-      style="display: none"
-      id="mySidebar"
-    >
-      <button onclick="closeSidebar()" class="w3-bar-item w3-large">
-        Close &times;
-      </button>
-      <a href="#" class="w3-bar-item w3-button">About </a>
-      <a href="#" class="w3-bar-item w3-button">Interests</a>
-      <a href="#" class="w3-bar-item w3-button">Hobbies</a>
-    </div>
-    <div class="w3-teal">
-      <button class="w3-button w3-teal w3-xlarge" onclick="openSidebar()">
-        ☰
-      </button>
-      <div class="w3-container"></div>
-    </div>
-    <div id="content">
-      <h2>Emma Paczkowski's Portfolio</h2>
-      <img src="/images/emmaLn.jpg" alt="Emma" width="250" height="300" />
+   <head>
+      <meta charset="UTF-8" />
+      <title>Emma Paczkowski</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+      <link rel="stylesheet" href="style.css" />
+      <script src="script.js"></script>
+   </head>
+   <body>
+      <div
+         class="w3-sidebar w3-bar-block w3-border-right"
+         style="display: none"
+         id="mySidebar"
+         >
+         <button onclick="closeSidebar()" class="w3-bar-item w3-large">
+         Close &times;
+         </button>
+         <a href="#" class="w3-bar-item w3-button">About </a>
+         <a href="#" class="w3-bar-item w3-button">Interests</a>
+         <a href="#" class="w3-bar-item w3-button">Hobbies</a>
+      </div>
+      <div class="w3-teal">
+         <button class="w3-button w3-teal w3-xlarge" onclick="openSidebar()">
+         ☰
+         </button>
+         <div class="w3-container"></div>
+      </div>
+      <div id="content">
+         <h2>Emma Paczkowski's Portfolio</h2>
+         <img src="/images/emmaLn.jpg" alt="Emma" width="250" height="300" />
+         <p>
+            Hello and welcome to my profile. Here you can learn more about me in
+            regards to my interest, hobbies and other fun facts. First, click her to
+            get a welcome message!
+         </p>
+         <button onclick="addRandomGreeting()">Hello</button>
+         <div id="greeting-container"></div>
+         <p>Click here to get the date.</p>
+         <button onclick="addDate()">Date</button>
+         <div id="date-container"></div>
+         <p>Here are the different places that I have lived.</p>
+         <button onclick="fetchList()">Click here</button>
+         <div id="places-lived-container"></div>
+      </div>
+      <h3>About</h3>
+      <h6>
+         These are the different places I have lived
+      </h6>
+      <div class="row">
+         <div class="column">
+            <div class="w3-card-4" style="width: 100%">
+               <header class="w3-container w3-blue">
+                  <h4>Canmore, Alberta</h4>
+               </header>
+               <div class="w3-container">
+                  <img src="/images/canmore.jpg" alt="Canmore" style="width: 100%" />
+               </div>
+               <footer class="w3-container w3-blue">
+                  <h5>
+                     I lived here from I was two and after I was 5. (2000-2002,
+                     2006-2020)
+                  </h5>
+               </footer>
+            </div>
+         </div>
+         <div class="column">
+            <div class="w3-card-4" style="width: 100%">
+               <header class="w3-container w3-blue">
+                  <h4>Kamchatka, Russia</h4>
+               </header>
+               <div class="w3-container">
+                  <img src="/images/russia.jpg" alt="Russia" style="width: 100%" />
+               </div>
+               <footer class="w3-container w3-blue">
+                  <h5>I lived here from the age of 2 to 5. (2002-2006)</h5>
+               </footer>
+            </div>
+         </div>
+         <div class="column">
+            <div class="w3-card-4" style="width: 100%">
+               <header class="w3-container w3-blue">
+                  <h4>Kingston, Ontario</h4>
+               </header>
+               <div class="w3-container">
+                  <img
+                     src="/images/kingston.jpeg"
+                     alt="Kingston"
+                     style="width: 100%"
+                     />
+               </div>
+               <footer class="w3-container w3-blue">
+                  <h5>
+                     Since 2018 I have lived here while I attend university.(2018-2020)
+                  </h5>
+               </footer>
+            </div>
+         </div>
+      </div>
+      &nbsp;&nbsp;
+      <p>Guess what my favourite animal is</p>
+      <button onclick="displayImage()">Answer</button>
+      <div id="fav_animal">
+         <img src="/images/chicken.JPG" alt="Chicken" style="width: 20%" />
+         <p>It is a chicken! This is my chicken, her name is Sprocket.</p>
+      </div>
+      <h3>Interests</h3>
       <p>
-        Hello and welcome to my profile. Here you can learn more about me in
-        regards to my interest, hobbies and other fun facts. First, click her to
-        get a welcome message!
+         I have just finished my second year of computer engineering at Queen’s
+         University where I have had the opportunity to explore my interest in many
+         fields. Throughout high school I was interested in space technology and
+         over the past two years I have furthered my curiosity as a member of my
+         Universities Space EngineeringTeam where we work on developing a 3-unite
+         cube satellite. I have been involved with both the communication team as
+         well as the additude termination control system. I am also interested in
+         environmental conservation and sustainability and seeing how technology
+         can assist in different sustainability initiatives.
       </p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-      <p>Click here to get the date.</p>
-      <button onclick="addDate()">Date</button>
-      <div id="date-container"></div>
-      <button onclick="getText()">Name</button>
-      <div id="name-container"></div>
-    </div>
-    <h3>About</h3>
-    <h6>
-      These are the different places I have lived
-    </h6>
-    <div class="row">
-      <div class="column">
-        <div class="w3-card-4" style="width: 100%">
-          <header class="w3-container w3-blue">
-            <h4>Canmore, Alberta</h4>
-          </header>
-          <div class="w3-container">
-            <img src="/images/canmore.jpg" alt="Canmore" style="width: 100%" />
-          </div>
-          <footer class="w3-container w3-blue">
-            <h5>
-              I lived here from I was two and after I was 5. (2000-2002,
-              2006-2020)
-            </h5>
-          </footer>
-        </div>
-      </div>
-      <div class="column">
-        <div class="w3-card-4" style="width: 100%">
-          <header class="w3-container w3-blue">
-            <h4>Kamchatka, Russia</h4>
-          </header>
-          <div class="w3-container">
-            <img src="/images/russia.jpg" alt="Russia" style="width: 100%" />
-          </div>
-          <footer class="w3-container w3-blue">
-            <h5>I lived here from the age of 2 to 5. (2002-2006)</h5>
-          </footer>
-        </div>
-      </div>
-      <div class="column">
-        <div class="w3-card-4" style="width: 100%">
-          <header class="w3-container w3-blue">
-            <h4>Kingston, Ontario</h4>
-          </header>
-          <div class="w3-container">
+      <h3>Hobbies</h3>
+      <h6>
+         In my free time I thoroughly enjoy spending time outside. Some of my
+         favourite activities include hiking, mountain hiking and cross country
+         skiing.
+      </h6>
+      <div class="row">
+         <div class="column">
+            <img src="/images/slideshow/syd.jpg" alt="Hiking" style="width: 100%" />
+         </div>
+         <div class="column">
             <img
-              src="/images/kingston.jpeg"
-              alt="Kingston"
-              style="width: 100%"
+               src="/images/slideshow/biking.JPG"
+               alt="Biking"
+               style="width: 100%"
+               />
+         </div>
+         <div class="column">
+            <img
+               src="/images/slideshow/skiing.JPG"
+               alt="Cross Country Skiing"
+               style="width: 100%"
+               />
+         </div>
+      </div>
+      &nbsp;&nbsp;
+      <p>Have a great day!</p>
+      <div class="footer">
+         <a href="https://github.com/emmapaczkowski">
+         <img
+            src="/images/githubpic.svg"
+            alt="Github"
+            style="width: 42px; height: 42px; border: 0"
             />
-          </div>
-          <footer class="w3-container w3-blue">
-            <h5>
-              Since 2018 I have lived here while I attend university.(2018-2020)
-            </h5>
-          </footer>
-        </div>
+         </a>
       </div>
-    </div>
-    &nbsp;&nbsp;
-    <p>Guess what my favourite animal is</p>
-    <button onclick="displayImage()">Answer</button>
-    <div id="fav_animal">
-      <img src="/images/chicken.JPG" alt="Chicken" style="width: 20%" />
-      <p>It is a chicken! This is my chicken, her name is Sprocket.</p>
-    </div>
-    <h3>Interests</h3>
-    <p>
-      I have just finished my second year of computer engineering at Queen’s
-      University where I have had the opportunity to explore my interest in many
-      fields. Throughout high school I was interested in space technology and
-      over the past two years I have furthered my curiosity as a member of my
-      Universities Space EngineeringTeam where we work on developing a 3-unite
-      cube satellite. I have been involved with both the communication team as
-      well as the additude termination control system. I am also interested in
-      environmental conservation and sustainability and seeing how technology
-      can assist in different sustainability initiatives.
-    </p>
-    <h3>Hobbies</h3>
-    <h6>
-      In my free time I thoroughly enjoy spending time outside. Some of my
-      favourite activities include hiking, mountain hiking and cross country
-      skiing.
-    </h6>
-    <div class="row">
-      <div class="column">
-        <img src="/images/slideshow/syd.jpg" alt="Hiking" style="width: 100%" />
-      </div>
-      <div class="column">
-        <img
-          src="/images/slideshow/biking.JPG"
-          alt="Biking"
-          style="width: 100%"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="/images/slideshow/skiing.JPG"
-          alt="Cross Country Skiing"
-          style="width: 100%"
-        />
-      </div>
-    </div>
-    &nbsp;&nbsp;
-    <p>Have a great day!</p>
-    <div class="footer">
-      <a href="https://github.com/emmapaczkowski">
-        <img
-          src="/images/githubpic.svg"
-          alt="Github"
-          style="width: 42px; height: 42px; border: 0"
-        />
-      </a>
-    </div>
-  </body>
+   </body>
 </html>

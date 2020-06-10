@@ -62,6 +62,28 @@ function getText() {
   fetch("/data")
     .then((response) => response.text())
     .then((text) => {
-      document.getElementById("name-container").innerText = text;
+      document.getElementById("places-lived-container").innerText = text;
     });
+}
+
+/**fetching the JSON arraylist string from server */
+function fetchList() {
+  fetch('/data').then(response => response.json()).then((placesLived) => {
+    console.log(placesLived);
+    const placesLivedElement = document.getElementById('places-lived-container');
+    placesLivedElement.innerHTML = '';
+    placesLivedElement.appendChild(
+      createListElement(placesLived[0]));
+    placesLivedElement.appendChild(
+      createListElement(placesLived[1]));
+    placesLivedElement.appendChild(
+      createListElement(placesLived[2]));
+  });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
