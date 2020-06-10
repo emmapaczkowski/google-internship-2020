@@ -90,8 +90,7 @@ function createListElement(text) {
 
 var map;
 function initMap() {
-  nmap = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 51.09, lng: -115.3442},
-    zoom: 10
-  });
+  var canmore = {lat: 51.09, lng: -115.3442};
+  var map = new google.maps.Map(document.getElementById('map'), {center: canmore, zoom: 10});
+  var marker = new google.maps.Marker({position: canmore, map: map});
 }
