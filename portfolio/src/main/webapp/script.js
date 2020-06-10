@@ -87,3 +87,11 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
+
+var map;
+function initMap() {
+  nmap = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 51.09, lng: -115.3442},
+    zoom: 10
+  });
+}
