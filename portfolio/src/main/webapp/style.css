@@ -1,9 +1,148 @@
 #content {
+  background-color: #c5cbe3;
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 850px;
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  text-align: center;
+}
+
+p1 {
+  font-size: 1.875em;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 15px;
+  text-align: left;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.sidenav {
+  background-color: #563838;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  width: 160px;
+  z-index: 1;
+}
+
+.sidenav a {
+  color: #f1e0d6;
+  display: block;
+  font-size: 25px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+.header {
+  colour: #a7414a;
+  text-align: left;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  padding: 5px;
+  width: 33.33%;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.footer {
+  background-color: #a7414a;
+  bottom: 0;
+  color: white;
+  height: 5%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  padding: 5px;
+  width: 33.33%;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#fav_animal {
+  background-color: #6a8a82;
+  margin-top: 20px;
+  padding: 50px 0;
+  text-align: center;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
 }

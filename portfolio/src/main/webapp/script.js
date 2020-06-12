@@ -16,13 +16,79 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
+  const greetings = [
+    "Hello world!",
+    "¡Hola Mundo!",
+    "你好，世界！",
+    "Bonjour le monde!",
+  ];
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
+  const greetingContainer = document.getElementById("greeting-container");
   greetingContainer.innerText = greeting;
+}
+
+function addDate() {
+  const date = new Date();
+  const dateContainer = document.getElementById("date-container");
+  dateContainer.innerText = date;
+}
+
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function displayImage() {
+  var x = document.getElementById("fav_animal");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function hideImage() {
+  var x = document.getElementById("fav_animal");
+  x.style.display = "block";
+}
+
+/** Adds text form DataServlet to the webpage using arrow */
+function getText() {
+  fetch("/data")
+    .then((response) => response.text())
+    .then((text) => {
+      document.getElementById("places-lived-container").innerText = text;
+    });
+}
+
+/**fetching the JSON arraylist string from server */
+function fetchList() {
+  fetch('/data').then(response => response.json()).then((placesLived) => {
+    console.log(placesLived);
+    const placesLivedElement = document.getElementById('places-lived-container');
+    placesLivedElement.innerHTML = '';
+    for( var i = 0 ; i < placesLived.length; i++) {
+      placesLivedElement.appendChild(
+      createListElement(placesLived[i]));
+    }
+  });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+var map;
+function initMap() {
+  var canmore = {lat: 51.09, lng: -115.3442};
+  var map = new google.maps.Map(document.getElementById('map'), {center: canmore, zoom: 10});
+  var marker = new google.maps.Marker({position: canmore, map: map});
 }
