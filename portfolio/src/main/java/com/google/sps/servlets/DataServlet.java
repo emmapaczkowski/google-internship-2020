@@ -23,21 +23,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
   
-  private List<String> placesLived = new ArrayList<>();
-  
-  @Override
-  public void init() {
-    placesLived.add("Canmore, Alberta");
-    placesLived.add("Kamchatka, Russia");
-    placesLived.add("Kingston, Ontario");
-    
-  }
+  private List<String> placesLived = new ArrayList<>(
+    Arrays.asList("Canmore, Alberta", "Kamchatka, Russia", "Kingston, Ontario"));
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -55,7 +48,6 @@ public class DataServlet extends HttpServlet {
    */
   private String convertToJsonUsingGson(List placesLived) {
     Gson gson = new Gson();
-    String json = gson.toJson(placesLived);
-    return json;
+    return gson.toJson(placesLived);
   }
 }
