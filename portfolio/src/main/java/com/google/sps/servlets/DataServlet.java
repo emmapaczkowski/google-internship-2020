@@ -57,5 +57,6 @@ public class DataServlet extends HttpServlet {
     Gson gson = new Gson();
     String json = gson.toJson(placesLived);
     return json;
+    return gson.ToJson(placesLived);
   }
 }
