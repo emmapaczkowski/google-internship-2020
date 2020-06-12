@@ -72,12 +72,10 @@ function fetchList() {
     console.log(placesLived);
     const placesLivedElement = document.getElementById('places-lived-container');
     placesLivedElement.innerHTML = '';
-    placesLivedElement.appendChild(
-      createListElement(placesLived[0]));
-    placesLivedElement.appendChild(
-      createListElement(placesLived[1]));
-    placesLivedElement.appendChild(
-      createListElement(placesLived[2]));
+    for( var i = 0 ; i < placesLived.length; i++) {
+      placesLivedElement.appendChild(
+      createListElement(placesLived[i]));
+    }
   });
 }
 
