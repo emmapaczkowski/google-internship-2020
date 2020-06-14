@@ -88,9 +88,36 @@ function createListElement(text) {
 
 var map;
 function initMap() {
+  var center = {lat:35 , lng:0 }
+  var princeGeorge = {lat: 53.92, lng: -122.75};
   var canmore = {lat: 51.09, lng: -115.3442};
-  var map = new google.maps.Map(document.getElementById('map'), {center: canmore, zoom: 10});
-  var marker = new google.maps.Marker({position: canmore, map: map});
+  var kamchatka = {lat: 53.058, lng: 158.632};
+  var kingsotn = {lat:44.23, lng: 76.48};
+
+  var map = new google.maps.Map(document.getElementById('map'), {center: center, zoom: 2.5});
+  var Marker = new google.maps.Marker({position: canmore, map: map});
+  var canmoreContent = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Canmore, Alberta</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Canmore</b>, is a small town located in the Alberta Rocky Mountians ' +
+      'Since I have been two this has been my main home'+ '</p>'
+      '</div>'+
+      '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+    content: canmoreContent, 
+  });
+
+  var canmoreMarker = new google.maps.Marker({
+    position: canmore,
+    map: map,
+    title: 'Canmore, Alberta'
+  });
+  canmoreMarker.addListener('click', function() {
+    infowindow.open(map, canmoreMarker);
+  });
 }
 
 /**
