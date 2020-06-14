@@ -109,8 +109,8 @@ function displayComments() {
 }
 
 function createComment(comment) {
-  const nameElement = createHTML('h4', comment.name);
-  const timeElement = createHTML('h5', comment.time);
+  const nameElement = createHTML('h6', comment.name);
+  const timeElement = createHTML('h6', comment.time);
 
   let headerHTML = document.createElement('div');
   headerHTML.className = "comment-heading";
@@ -119,7 +119,7 @@ function createComment(comment) {
     headerHTML.appendChild(htmlElement)
   });
   
-  const contentElement = createHTML('h4', comment.message);
+  const contentElement = createHTML('h6', comment.message);
 
   let commentHTML = document.createElement('div');
   commentHTML.className = "comment";
