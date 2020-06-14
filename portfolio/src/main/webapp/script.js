@@ -16,108 +16,159 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings = [
-    "Hello world!",
-    "¡Hola Mundo!",
-    "你好，世界！",
-    "Bonjour le monde!",
-  ];
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-  // Add it to the page.
-  const greetingContainer = document.getElementById("greeting-container");
-  greetingContainer.innerText = greeting;
+ const greetings = [
+  "Hello world!",
+  "¡Hola Mundo!",
+  "你好，世界！",
+  "Bonjour le monde!",
+ ];
+ // Pick a random greeting.
+ const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+ // Add it to the page.
+ const greetingContainer = document.getElementById("greeting-container");
+ greetingContainer.innerText = greeting;
 }
 
 function addDate() {
-  const date = new Date();
-  const dateContainer = document.getElementById("date-container");
-  dateContainer.innerText = date;
+ const date = new Date();
+ const dateContainer = document.getElementById("date-container");
+ dateContainer.innerText = date;
 }
 
 function openSidebar() {
-  document.getElementById("mySidebar").style.display = "block";
+ document.getElementById("mySidebar").style.display = "block";
 }
 
 function closeSidebar() {
-  document.getElementById("mySidebar").style.display = "none";
+ document.getElementById("mySidebar").style.display = "none";
 }
 
 function displayImage() {
-  var x = document.getElementById("fav_animal");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+ var x = document.getElementById("fav_animal");
+ if (x.style.display === "none") {
+  x.style.display = "block";
+ } else {
+  x.style.display = "none";
+ }
 }
 
 function hideImage() {
-  var x = document.getElementById("fav_animal");
-  x.style.display = "block";
+ var x = document.getElementById("fav_animal");
+ x.style.display = "block";
 }
 
 /** Adds text form DataServlet to the webpage using arrow */
 function getText() {
-  fetch("/data")
-    .then((response) => response.text())
-    .then((text) => {
-      document.getElementById("places-lived-container").innerText = text;
-    });
+ fetch("/data")
+  .then((response) => response.text())
+  .then((text) => {
+   document.getElementById("places-lived-container").innerText = text;
+  });
 }
 
 /**fetching the JSON arraylist string from server */
 function fetchList() {
-  fetch('/data').then(response => response.json()).then((placesLived) => {
-    console.log(placesLived);
-    const placesLivedElement = document.getElementById('places-lived-container');
-    placesLivedElement.innerHTML = '';
-    for( var i = 0 ; i < placesLived.length; i++) {
-      placesLivedElement.appendChild(
-      createListElement(placesLived[i]));
-    }
-  });
+ fetch('/data').then(response => response.json()).then((placesLived) => {
+  console.log(placesLived);
+  const placesLivedElement = document.getElementById('places-lived-container');
+  placesLivedElement.innerHTML = '';
+  for (var i = 0; i < placesLived.length; i++) {
+   placesLivedElement.appendChild(
+    createListElement(placesLived[i]));
+  }
+ });
 }
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
+ const liElement = document.createElement('li');
+ liElement.innerText = text;
+ return liElement;
 }
 
 var map;
+
 function initMap() {
-  var center = {lat:35 , lng:0 }
-  var princeGeorge = {lat: 53.92, lng: -122.75};
-  var canmore = {lat: 51.09, lng: -115.3442};
-  var kamchatka = {lat: 53.058, lng: 158.632};
-  var kingsotn = {lat:44.23, lng: 76.48};
+ var center = {
+  lat: 35,
+  lng: 0
+ }
+ var princeGeorge = {
+  lat: 53.92,
+  lng: -122.75
+ };
+ var canmore = {
+  lat: 51.09,
+  lng: -115.3442
+ };
+ var kamchatka = {
+  lat: 53.058,
+  lng: 158.632
+ };
+ var kingsotn = {
+  lat: 44.23,
+  lng: 76.48
+ };
 
-  var map = new google.maps.Map(document.getElementById('map'), {center: center, zoom: 2.5});
-  var Marker = new google.maps.Marker({position: canmore, map: map});
-  var canmoreContent = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">Canmore, Alberta</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>Canmore</b>, is a small town located in the Alberta Rocky Mountians ' +
-      'Since I have been two this has been my main home'+ '</p>'
-      '</div>'+
-      '</div>';
+ var map = new google.maps.Map(document.getElementById('map'), {
+  center: center,
+  zoom: 2.5
+ });
+ var canmoreMarker = new google.maps.Marker({
+  position: canmore,
+  map: map
+ });
 
-    var infowindow = new google.maps.InfoWindow({
-    content: canmoreContent, 
-  });
+ var kamchatkaMarker = new google.maps.Marker({
+  position: kamchatka,
+  map: map
+ });
 
-  var canmoreMarker = new google.maps.Marker({
-    position: canmore,
-    map: map,
-    title: 'Canmore, Alberta'
-  });
-  canmoreMarker.addListener('click', function() {
-    infowindow.open(map, canmoreMarker);
-  });
+ var canmoreContent = '<div id="content">' +
+  '<div id="siteNotice">' +
+  '</div>' +
+  '<h1 id="firstHeading" class="firstHeading">Canmore, Alberta</h1>' +
+  '<div id="bodyContent">' +
+  '<p><b>Canmore</b>, is a small town located in the Alberta Rocky Mountians Since I have been two this has been my main home' + '</p>'
+ '</div>' +
+ '</div>';
+ var kamchatkaContent = '<div id="content">' +
+  '<div id="siteNotice">' +
+  '</div>' +
+  '<h1 id="firstHeading" class="firstHeading">Kamchatka, Russia</h1>' +
+  '<div id="bodyContent">' +
+  '<p><b>Kamchatka</b>, is a penninsula off the eastern cost of Russia.' +
+  'I lived here from when I was 2 until 5.' + '</p>'
+ '</div>' +
+ '</div>';
+
+ var canmoreInfowindow = new google.maps.InfoWindow({
+  content: canmoreContent,
+  maxWidth: 320
+ });
+
+ var kamchatkaInfowindow = new google.maps.InfoWindow({
+  content: kamchatkaContent,
+  maxWidth: 320
+ });
+
+ var canmoreMarker = new google.maps.Marker({
+  position: canmore,
+  map: map,
+  title: 'Canmore, Alberta'
+ });
+ var kamchatkaMarker = new google.maps.Marker({
+  position: kamchatka,
+  map: map,
+  title: 'Kamchatka, Russia'
+ });
+ canmoreMarker.addListener('click', function() {
+  canmoreInfowindow.open(map, canmoreMarker);
+ });
+
+ kamchatkaMarker.addListener('click', function() {
+  kamchatkaInfowindow.open(map, kamchatkaMarker);
+ });
 }
 
 /**
@@ -125,41 +176,41 @@ function initMap() {
  */
 //function called by blogposts.html's body onload 
 function displayComments() {
-  let commentsQuantity = document.getElementById('commentsQuantity').value;
-  fetch("/add-comment?commentsQuantity="+commentsQuantity).then(response => response.json()).then((comments) => {
-      const commentContainer = document.getElementById('comments-container');
-      commentContainer.innerHTML = "";
-      comments.forEach((comment) => {
-        commentContainer.appendChild(createComment(comment))
-      });
-    });
+ let commentsQuantity = document.getElementById('commentsQuantity').value;
+ fetch("/add-comment?commentsQuantity=" + commentsQuantity).then(response => response.json()).then((comments) => {
+  const commentContainer = document.getElementById('comments-container');
+  commentContainer.innerHTML = "";
+  comments.forEach((comment) => {
+   commentContainer.appendChild(createComment(comment))
+  });
+ });
 }
 
 function createComment(comment) {
-  const nameElement = createHTML('h6', comment.name);
-  const timeElement = createHTML('h6', comment.time);
+ const nameElement = createHTML('h6', comment.name);
+ const timeElement = createHTML('h6', comment.time);
 
-  let headerHTML = document.createElement('div');
-  headerHTML.className = "comment-heading";
-  let headerElements = [nameElement, timeElement]
-  headerElements.forEach((htmlElement) => {
-    headerHTML.appendChild(htmlElement)
-  });
-  
-  const contentElement = createHTML('h6', comment.message);
+ let headerHTML = document.createElement('div');
+ headerHTML.className = "comment-heading";
+ let headerElements = [nameElement, timeElement]
+ headerElements.forEach((htmlElement) => {
+  headerHTML.appendChild(htmlElement)
+ });
 
-  let commentHTML = document.createElement('div');
-  commentHTML.className = "comment";
-  
-  let commentElements = [headerHTML, contentElement];
-  commentElements.forEach((htmlElement) => {
-    commentHTML.appendChild(htmlElement)
-  });
-  return commentHTML;
+ const contentElement = createHTML('h6', comment.message);
+
+ let commentHTML = document.createElement('div');
+ commentHTML.className = "comment";
+
+ let commentElements = [headerHTML, contentElement];
+ commentElements.forEach((htmlElement) => {
+  commentHTML.appendChild(htmlElement)
+ });
+ return commentHTML;
 }
 
 function createHTML(type, content) {
-    const htmlElement = document.createElement(type);
-    htmlElement.innerHTML = content;
-    return htmlElement;
+ const htmlElement = document.createElement(type);
+ htmlElement.innerHTML = content;
+ return htmlElement;
 }
