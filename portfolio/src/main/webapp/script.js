@@ -105,15 +105,20 @@ function initMap() {
   lat: 53.058,
   lng: 158.632
  };
- var kingsotn = {
+ var kingston = {
   lat: 44.23,
-  lng: 76.48
+  lng: -76.48
  };
 
  var map = new google.maps.Map(document.getElementById('map'), {
   center: center,
   zoom: 2.5
  });
+ var PGMarker = new google.maps.Marker({
+  position: princeGeorge,
+  map: map
+ });
+
  var canmoreMarker = new google.maps.Marker({
   position: canmore,
   map: map
@@ -124,6 +129,20 @@ function initMap() {
   map: map
  });
 
+var KingstonMarker = new google.maps.Marker({
+  position: kingston,
+  map: map
+ });
+
+var PGContent = '<div id="content">' +
+  '<div id="siteNotice">' +
+  '</div>' +
+  '<h1 id="firstHeading" class="firstHeading">Prince George, B.C.</h1>' +
+  '<div id="bodyContent">' +
+  '<p><b>Prince George</b>, is a small city located in notherb British Columbia.'+
+  ' I has born here in 2000 and spent the first 2 years of my lie in the city' + '</p>'
+ '</div>' +
+ '</div>';
  var canmoreContent = '<div id="content">' +
   '<div id="siteNotice">' +
   '</div>' +
@@ -141,17 +160,37 @@ function initMap() {
   'I lived here from when I was 2 until 5.' + '</p>'
  '</div>' +
  '</div>';
+ var kingstonContent = '<div id="content">' +
+  '<div id="siteNotice">' +
+  '</div>' +
+  '<h1 id="firstHeading" class="firstHeading">Kingston, Ontario</h1>' +
+  '<div id="bodyContent">' +
+  '<p><b>Kingston</b>, is a city on lake Ontario. I have spent the last 2 years attending Univeristy here.' +
+ '</div>' +
+ '</div>';
 
+var PGInfowindow = new google.maps.InfoWindow({
+  content: PGContent,
+  maxWidth: 320
+ });
  var canmoreInfowindow = new google.maps.InfoWindow({
   content: canmoreContent,
   maxWidth: 320
  });
-
  var kamchatkaInfowindow = new google.maps.InfoWindow({
   content: kamchatkaContent,
   maxWidth: 320
  });
+ var kingstonInfowindow = new google.maps.InfoWindow({
+  content: kingstonContent,
+  maxWidth: 320
+ });
 
+var PGMarker = new google.maps.Marker({
+  position: princeGeorge,
+  map: map,
+  title: 'Prince George, B.C.'
+ });
  var canmoreMarker = new google.maps.Marker({
   position: canmore,
   map: map,
@@ -162,12 +201,23 @@ function initMap() {
   map: map,
   title: 'Kamchatka, Russia'
  });
+var kingstonMarker = new google.maps.Marker({
+  position: kingston,
+  map: map,
+  title: 'Kingston, Ontario'
+ });
+
+ PGMarker.addListener('click', function() {
+  PGInfowindow.open(map, PGMarker);
+ });
  canmoreMarker.addListener('click', function() {
   canmoreInfowindow.open(map, canmoreMarker);
  });
-
  kamchatkaMarker.addListener('click', function() {
   kamchatkaInfowindow.open(map, kamchatkaMarker);
+ });
+ kingstonMarker.addListener('click', function() {
+  kingstonInfowindow.open(map, kingstonMarker);
  });
 }
 
