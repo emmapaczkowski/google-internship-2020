@@ -23,8 +23,6 @@ public class CommentServlet extends HttpServlet {
  @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    int entityCount=-1;
-
     Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
@@ -39,16 +37,13 @@ public class CommentServlet extends HttpServlet {
       Date time = (Date) entity.getProperty("timestamp");
 
       commentList.add(new Comment(name, message, time));
-      entityCount++;
     }
 
-    int numComments = getNumComments(request);
+    int numCommentsRequested = getNumComments(request);
 
-    if (numComments>entityCount){
-        numComments=entityCount;
+     if (commentList.size() > numCommentsRequested){
+      commentList = commentList.subList(0, numCommentsRequested);
     }
-
-    commentList = commentList.subList(0, numComments);
 
     String json = convertToJsonUsingGson(commentList);
 
@@ -58,24 +53,17 @@ public class CommentServlet extends HttpServlet {
 
   private int getNumComments(HttpServletRequest request){
     String userChoiceString = request.getParameter("commentsQuantity");
-
+    
     int userChoice;
-    try {
-      userChoice = Integer.parseInt(userChoiceString);
-    } 
-    catch (NumberFormatException e) {
-      System.err.println("Could not convert to int: " + userChoiceString);
-      return -1;
-    }
+    userChoice = Integer.parseInt(userChoiceString); 
 
-    // Check that the input is between 1
     if (userChoice < 1) {
-      System.err.println("Player choice is out of range: " + userChoiceString);
-      return -1;
+      throw new IllegalArgumentException("Player choice is out of range: " + userChoice);
     }
 
     return userChoice;
   }
+
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
