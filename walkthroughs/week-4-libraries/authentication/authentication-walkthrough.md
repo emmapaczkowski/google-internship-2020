@@ -64,7 +64,7 @@ The Users API comes with the App Engine environment, so to use it, first add the
 App Engine dependency to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file:
 
@@ -87,7 +87,7 @@ to output HTML based on the user's login status.
 Read through the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/authentication/examples/hello-world/src/main/java/com/google/sps/servlets/HomeServlet.java">
-  HomeServlet.java
+HomeServlet.java
 </walkthrough-editor-open-file>
 file to see the Users API in action.
 
@@ -136,7 +136,7 @@ that contains the user ID.
 The `shoutbox-v3` directory contains an example that takes this approach. The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/authentication/examples/shoutbox-v3/src/main/java/com/google/sps/servlets/ShoutboxServlet.java">
-  ShoutboxServlet.java
+ShoutboxServlet.java
 </walkthrough-editor-open-file>
 file gets the user's email and adds it to the stored message:
 
@@ -157,14 +157,14 @@ The `user-nicknames` directory contains an example that supports user
 display names. The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/authentication/examples/user-nicknames/src/main/java/com/google/sps/servlets/HomeServlet.java">
-  HomeServlet.java
+HomeServlet.java
 </walkthrough-editor-open-file>
 file shows an example that prompts the user for a nickname before continuing.
 
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/authentication/examples/user-nicknames/src/main/java/com/google/sps/servlets/NicknameServlet.java">
-  NicknameServlet.java
+NicknameServlet.java
 </walkthrough-editor-open-file>
 file renders a form that allows logged-in users to specify a nickname and
 handles the resulting POST request.
@@ -193,46 +193,46 @@ they can post a comment.
 Try to break this goal down into smaller steps, and then take each step on
 individually.
 
--   Add the App Engine dependency to your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file>
-    file.
--   Add a servlet that returns the login status of the user.
-    -   Test that this works by running a dev server and navigating to the
-        servlet's URL.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   Hide the comments form by default. Modify your
-    <walkthrough-editor-open-file
-        filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/script.js">
-      script.js
-    </walkthrough-editor-open-file>
-    file to fetch the login status from the servlet. If the user is logged in,
-    unhide the form. If the user is not logged in, display a login link.
-    -   Test that this works by running a dev server and making sure your page
-        shows the right content.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   Modify your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-      DataServlet.java
-    </walkthrough-editor-open-file>
-    file to get the current user's email address, and store it alongside the
-    text of the comment.
--   Add the user's email address to the JSON returned by your comments servlet.
-    -   Test that this works by running a dev server and navigating to the
-        comments servlet's URL. You should see the JSON in the browser.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   Modify your JavaScript to show the email address of the user who posted each
-    comment.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   (Optional) Add support for users specifying display names, so you no longer
-    need to show email addresses.
+- Add the App Engine dependency to your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file>
+  file.
+- Add a servlet that returns the login status of the user.
+  - Test that this works by running a dev server and navigating to the
+    servlet's URL.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- Hide the comments form by default. Modify your
+  <walkthrough-editor-open-file
+      filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/script.js">
+  script.js
+  </walkthrough-editor-open-file>
+  file to fetch the login status from the servlet. If the user is logged in,
+  unhide the form. If the user is not logged in, display a login link.
+  - Test that this works by running a dev server and making sure your page
+    shows the right content.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- Modify your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
+  DataServlet.java
+  </walkthrough-editor-open-file>
+  file to get the current user's email address, and store it alongside the
+  text of the comment.
+- Add the user's email address to the JSON returned by your comments servlet.
+  - Test that this works by running a dev server and navigating to the
+    comments servlet's URL. You should see the JSON in the browser.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- Modify your JavaScript to show the email address of the user who posted each
+  comment.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- (Optional) Add support for users specifying display names, so you no longer
+  need to show email addresses.
 
 ## Live Server
 
@@ -241,7 +241,7 @@ you can deploy it to your live server!
 
 Your
 <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:

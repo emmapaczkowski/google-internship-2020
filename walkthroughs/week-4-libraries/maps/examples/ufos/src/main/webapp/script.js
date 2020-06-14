@@ -14,14 +14,19 @@
 
 /** Fetches UFO sightings data from the server and displays it in a map. */
 function createUfoSightingsMap() {
-  fetch('/ufo-data').then(response => response.json()).then((ufoSightings) => {
-    const map = new google.maps.Map(
-        document.getElementById('map'),
-        {center: {lat: 35.78613674, lng: -119.4491591}, zoom: 7});
+  fetch("/ufo-data")
+    .then((response) => response.json())
+    .then((ufoSightings) => {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 35.78613674, lng: -119.4491591 },
+        zoom: 7,
+      });
 
-    ufoSightings.forEach((ufoSighting) => {
-      new google.maps.Marker(
-          {position: {lat: ufoSighting.lat, lng: ufoSighting.lng}, map: map});
+      ufoSightings.forEach((ufoSighting) => {
+        new google.maps.Marker({
+          position: { lat: ufoSighting.lat, lng: ufoSighting.lng },
+          map: map,
+        });
+      });
     });
-  });
 }

@@ -38,7 +38,7 @@ project then tests the actual output against the expected output.
 For example, open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/intro/src/main/java/com/google/sps/Greeter.java">
-  Greeter.java
+Greeter.java
 </walkthrough-editor-open-file>
 file. This class creates greeting messages. How can you confirm that this code
 does what you expect?
@@ -46,7 +46,7 @@ does what you expect?
 Next, open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/intro/src/test/java/com/google/sps/GreeterTest.java">
-  GreeterTest.java
+GreeterTest.java
 </walkthrough-editor-open-file>
 file. This class contains a unit test that confirms the behavior of the
 `Greeter` class.
@@ -80,7 +80,7 @@ tests.
 For example, add this function to the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/intro/src/test/java/com/google/sps/GreeterTest.java">
-  GreeterTest.java
+GreeterTest.java
 </walkthrough-editor-open-file>
 file:
 
@@ -113,14 +113,14 @@ BUILD FAILURE
 ```
 
 This tells you that the `testGreetingWhitespace` test failed. The expected
-output was `"Hello Ada"` but the actual output was `"   Hello Ada   "`. This
+output was `"Hello Ada"` but the actual output was `" Hello Ada "`. This
 means something in the code is not working as expected.
 
 The problem is that the `Greeter` class is not removing the extra whitespace.
 Modify the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/intro/src/main/java/com/google/sps/Greeter.java">
-  Greeter.java
+Greeter.java
 </walkthrough-editor-open-file>
 file to trim the whitespace. After doing that, run the tests again. You should
 see them passing now.
@@ -141,8 +141,6 @@ If you want to learn how to test for something with JUnit, try including that
 in your search. For example, if you want to test that a method throws an
 exception, you might search for "JUnit confirm exception thrown".
 
-
-
 ## Mocking
 
 One of the major challenges of developer testing is that the tests that you write should be fast so that you can run them frequently and quickly.
@@ -153,7 +151,6 @@ One solution would be for your test to create a test database for your code to i
 To resolve this problem, all programming languages with unit testing libraries offer libraries to do was is called "mocking". [Mock objects](https://en.wikipedia.org/wiki/Mock_object) are lightweight, in-memory objects that simulate or mimic the behavior of real objects in ways that make it easy (or at least easier) to test. For this program, we will be using the [Mockito](https://site.mockito.org/) framework that we use for Java mocking at Google.
 
 This [tutorial](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#1) shows an example of how to mock a List object using Mockito. Of course, mocking a List is unnecessary since it is already in-memory and fast but it serves as a good, easy-to-understand example of how mocking works.
-
 
 ## Next Steps
 

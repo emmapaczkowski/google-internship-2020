@@ -5,8 +5,8 @@
 In this walkthrough, we'll be adding two additional features to
 our comments functionality:
 
--   Letting the user select the number of comments displayed
--   Letting the user delete all comments
+- Letting the user select the number of comments displayed
+- Letting the user delete all comments
 
 You can return to this walkthrough anytime by running this command:
 
@@ -91,12 +91,12 @@ should call your function to fetch comments from the server so that the
 now-deleted comments are removed from the page; you can either use
 `Promise.then()` to chain the calls, or use `await` for your POST request.
 
-*Note: it might look a little strange to make a GET request to `/data`
+_Note: it might look a little strange to make a GET request to `/data`
 when we know we will just be deleting all the comments, but it's usually
 a good idea to let the server be the
 [single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth).
 This prevents our web page from getting out of sync with the datastore
-as we add more complex behavior.*
+as we add more complex behavior._
 
 Finally, add a button to index.html below your comment section which calls
 your comment deletion function. Run a dev server to make sure that

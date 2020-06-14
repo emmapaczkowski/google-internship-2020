@@ -27,7 +27,7 @@
       <h2>Emma Paczkowski's Portfolio</h2>
       <img src="/images/emmaLn.jpg" alt="Emma" width="250" height="310" />
       <p>
-        Hello and welcome to my profile. Here you can learn more about me in regards to my interest, hobbies and other fun facts. First, click her to get a welcome message!
+        Hello and welcome to my profile! Here you can learn more about me in regards to my interest, hobbies and other fun facts. First, click her to get a welcome message!
       </p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
@@ -123,6 +123,29 @@
         <img src="/images/slideshow/skiing.JPG" alt="Cross Country Skiing" style="width: 100%;" />
       </div>
     </div>
+
+
+    <div class="comment-section">
+    <h3>Comments Form</h3>
+    <form action="/add-comment" method="POST">
+      <label for="name-input">Name</label></br>
+      <input type="text" name="name-input" placeholder="Your name"></br></br>
+      <label for="message">Comment</label></br>
+      <textarea id="cname" type="text" name="message" placeholder="Leave a Comment"></textarea></br></br>
+      <input class="submit-btn" type="submit" value="Submit Comment"/></br></br>
+    <form>
+
+    <label for="commentsQuantity">Select the quantity of comments you would like to see:</label>
+    <input type="number" id="commentsQuantity" name="commentsQuantity" min="1" max="25">
+    <input type="submit" onclick="displayComments()" value="Display comments">
+
+    <div id="comments-container"></div>
+    </div>
+      
+
+
+
+
     &nbsp;&nbsp;
     <p>Have a great day!</p>
     <div class="footer">

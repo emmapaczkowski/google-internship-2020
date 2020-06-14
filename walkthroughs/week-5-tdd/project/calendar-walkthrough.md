@@ -31,23 +31,23 @@ meeting could happen that day.
 
 A meeting request has:
 
--   a name
--   a duration in minutes
--   a collection of attendees
+- a name
+- a duration in minutes
+- a collection of attendees
 
 For a particular time slot to work, all attendees must be free to attend the
 meeting. When a query is made, it will be given a collection of all known
 events. Each event has:
 
--   a name
--   a time range
--   a collection of attendees
+- a name
+- a time range
+- a collection of attendees
 
 A time range will give you the start time, the end time, and the duration of
 the event. If you want to know more, open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/project/src/main/java/com/google/sps/TimeRange.java">
-  TimeRange.java
+TimeRange.java
 </walkthrough-editor-open-file>
 file.
 
@@ -56,7 +56,7 @@ file.
 Your objective is to implement `query()` in the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/project/src/main/java/com/google/sps/FindMeetingQuery.java">
-  FindMeetingQuery.java
+FindMeetingQuery.java
 </walkthrough-editor-open-file>
 file.
 
@@ -85,7 +85,7 @@ The basic functionality of optional attendees is that if one or more time slots 
 
 Before implementing this feature, add some new tests to the <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-5-tdd/project/src/test/java/com/google/sps/FindMeetingQueryTest.java">
-  FindMeetingQueryTest.java
+FindMeetingQueryTest.java
 </walkthrough-editor-open-file>
 
 file. Write one test for each of the following scenarios:
@@ -99,7 +99,6 @@ file. Write one test for each of the following scenarios:
 Feel free to add additional tests for other scenarios that you think might be worth testing.
 
 Then modify `query` to make those new tests (and the provided tests) pass.
-
 
 ## Optional Coding Challenge
 
@@ -146,5 +145,5 @@ a lot for one week!
 
 If you have time left over this week and you're looking for a challenge:
 
--   What's the algorithmic complexity of your algorithm?
--   What's another algorithm to solve this problem?
+- What's the algorithmic complexity of your algorithm?
+- What's another algorithm to solve this problem?

@@ -18,33 +18,33 @@ Click the **Start** button to begin!
 You'll be working from the `portfolio` directory. Take a minute to look at the
 files under that directory.
 
--   <walkthrough-editor-open-file
-        filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file>
-    is a Maven configuration file. This file sets up the libraries the project
-    uses.
--   <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/webapp/index.html">
-      index.html
-    </walkthrough-editor-open-file>
-    is an HTML file that will be rendered by the browser.
--   <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/webapp/script.js">
-      script.js
-    </walkthrough-editor-open-file>
-    contains JavaScript that makes the page interactive.
--   <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/webapp/style.css">
-      style.css
-    </walkthrough-editor-open-file>
-    contains CSS that styles the page.
--   <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/webapp/WEB-INF/appengine-web.xml">
-      appengine-web.xml
-    </walkthrough-editor-open-file>
-    is App Engine's configuration file. This file tells Google Cloud how to
-    deploy your code.
+- <walkthrough-editor-open-file
+      filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file>
+  is a Maven configuration file. This file sets up the libraries the project
+  uses.
+- <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/webapp/index.html">
+  index.html
+  </walkthrough-editor-open-file>
+  is an HTML file that will be rendered by the browser.
+- <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/webapp/script.js">
+  script.js
+  </walkthrough-editor-open-file>
+  contains JavaScript that makes the page interactive.
+- <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/webapp/style.css">
+  style.css
+  </walkthrough-editor-open-file>
+  contains CSS that styles the page.
+- <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/webapp/WEB-INF/appengine-web.xml">
+  appengine-web.xml
+  </walkthrough-editor-open-file>
+  is App Engine's configuration file. This file tells Google Cloud how to
+  deploy your code.
 
 Try navigating to the various files in this project and viewing their contents
 in the Google Cloud Shell editor.
@@ -132,7 +132,7 @@ the next step!
 Open the
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 file in the Google Cloud Shell editor.
 
@@ -174,15 +174,15 @@ cache-clearing refresh.
 The `examples/stanley` directory contains an example webpage. It contains
 several files and directories:
 
--   `pom.xml` is Maven's configuration file.
--   `index.html` uses HTML tags to create a homepage that links to other pages.
--   `images.html` uses HTML tags to create an image gallery.
--   `random.html` loads JavaScript that shows a random image from the gallery.
--   `script.js` is JavaScript that defines a function that shows a random image.
--   `images/` contains the images used in the above files.
--   `style.css` is a CSS file that defines the styling for the HTML content.
--   `/WEB-INF` contains files that visitors to the site can't navigate to.
--   `appengine-web.xml` is App Engine's configuration file.
+- `pom.xml` is Maven's configuration file.
+- `index.html` uses HTML tags to create a homepage that links to other pages.
+- `images.html` uses HTML tags to create an image gallery.
+- `random.html` loads JavaScript that shows a random image from the gallery.
+- `script.js` is JavaScript that defines a function that shows a random image.
+- `images/` contains the images used in the above files.
+- `style.css` is a CSS file that defines the styling for the HTML content.
+- `/WEB-INF` contains files that visitors to the site can't navigate to.
+- `appengine-web.xml` is App Engine's configuration file.
 
 Deploy the example webpage by `cd`-ing into the `stanley` directory and then
 running a dev server:
@@ -204,8 +204,8 @@ When you're done looking at the example, `cd` back into the `portfolio` director
 
 If you‘re new to HTML, that’s okay! Here are a couple introductory tutorials:
 
--   [W3Schools](http://w3schools.com/html/html_intro.asp)
--   [MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [W3Schools](http://w3schools.com/html/html_intro.asp)
+- [MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
 Often, you'll want more details and examples for a specific type of HTML tag. The
 [W3Schools tag reference](https://www.w3schools.com/tags/) is a great starting point for
@@ -216,14 +216,14 @@ that; we recommend looking at [divs](https://www.w3schools.com/tags/tag_div.asp)
 For now, edit your
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 file to contain a `<p>` element that introduces you. Then run a dev server and
 confirm that you can see your change.
 
 ## Uploading Images
 
-All  of the client-side files are stored in the `webapp` directory. In order to
+All of the client-side files are stored in the `webapp` directory. In order to
 keep your images in one place, create a new `images` directory inside the
 `webapp` directory. To create a new directory, right click on the `webapp`
 directory. Then select "New Folder".
@@ -238,7 +238,7 @@ server and when you deploy to a live URL.
 Modify your
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 file to include an image. It can be a selfie, or an avatar, or a picture of
 your pet. This is your portfolio, so make it your own!
@@ -249,7 +249,7 @@ You can use Cascading Style Sheets, or CSS, to style your HTML with formatting
 and colors. The
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/webapp/style.css">
-  style.css
+style.css
 </walkthrough-editor-open-file>
 file contains some default styling.
 
@@ -279,7 +279,7 @@ You can use JavaScript to make your page interactive.
 Open the
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file to see a function that shows a random greeting.
 
@@ -308,13 +308,13 @@ For more details on a specific built-in type or function, try the
 Your goal this week is to customize your portfolio page. What that means is up
 to you, but here are a few ideas to get you started:
 
--   Add a couple paragraphs explaining your background and what makes you you.
--   Add a list of projects you've worked on.
--   Add a link to your LinkedIn and GitHub profiles.
--   Add images! Create a gallery of your favorite places, or selfies, or
-    pictures of your pets.
--   Add a couple paragraphs explaining what you enjoy photographing.
--   Add some blog posts explaining one of your hidden talents.
+- Add a couple paragraphs explaining your background and what makes you you.
+- Add a list of projects you've worked on.
+- Add a link to your LinkedIn and GitHub profiles.
+- Add images! Create a gallery of your favorite places, or selfies, or
+  pictures of your pets.
+- Add a couple paragraphs explaining what you enjoy photographing.
+- Add some blog posts explaining one of your hidden talents.
 
 This is **your** portfolio page, so make it your own!
 
@@ -390,29 +390,29 @@ world, you can deploy it to a live server!
 
 To deploy to a live server:
 
--   Navigate to
-    [https://console.cloud.google.com/home/dashboard](https://console.cloud.google.com/home/dashboard).
--   Make sure your project is selected in the dropdown at the top.
--   Find the **Project ID** on that page.
--   Open the
-    <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file>
-    file.
--   Change `YOUR_PROJECT_ID_HERE` to your project ID.
--   Enable Cloud Build on your project by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=YOUR_PROJECT_ID_HERE
-    - Will require enabling billing. See doc for Intern Dev Environment Setup https://docs.google.com/document/d/1_zKf_Vpb1lxnWLDhQ6IGcA6W95UBufr06SmmoJZY7iE/edit#heading=h.wzgtvu2xiuh3. You will be unable to deploy applications after November 30, 2019 without adding a billing instrument to your project. Please add one at https://console.cloud.google.com/billing/linkedaccount?YOUR_PROJECT_ID_HERE
--   Execute this command:
+- Navigate to
+  [https://console.cloud.google.com/home/dashboard](https://console.cloud.google.com/home/dashboard).
+- Make sure your project is selected in the dropdown at the top.
+- Find the **Project ID** on that page.
+- Open the
+  <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file>
+  file.
+- Change `YOUR_PROJECT_ID_HERE` to your project ID.
+- Enable Cloud Build on your project by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=YOUR_PROJECT_ID_HERE
+  - Will require enabling billing. See doc for Intern Dev Environment Setup https://docs.google.com/document/d/1_zKf_Vpb1lxnWLDhQ6IGcA6W95UBufr06SmmoJZY7iE/edit#heading=h.wzgtvu2xiuh3. You will be unable to deploy applications after November 30, 2019 without adding a billing instrument to your project. Please add one at https://console.cloud.google.com/billing/linkedaccount?YOUR_PROJECT_ID_HERE
+- Execute this command:
 
 ```bash
 mvn package appengine:deploy
 ```
 
--   The first time you run this command, the console will give you a link. Open
-    that link, and login to that page using your `@google.com` account.
--   After you login, you'll see a long string of characters. Copy those
-    characters.
--   Paste the characters into the console and press enter.
+- The first time you run this command, the console will give you a link. Open
+  that link, and login to that page using your `@google.com` account.
+- After you login, you'll see a long string of characters. Copy those
+  characters.
+- Paste the characters into the console and press enter.
 
 After the command successfully completes, you can now navigate to
 `YOUR_PROJECT_ID.appspot.com` to see your portfolio.

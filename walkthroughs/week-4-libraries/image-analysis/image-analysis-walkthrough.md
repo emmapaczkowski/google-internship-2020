@@ -77,7 +77,7 @@ library to your classpath, add this Maven dependency:
 Add this dependency to the
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file in your portfolio directory.
 
@@ -89,7 +89,7 @@ for an image uploaded by a user.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/image-analysis/examples/image-analyzer/src/main/webapp/index.jsp">
-  index.jsp
+index.jsp
 </walkthrough-editor-open-file>
 file gets the Blobstore upload URL and uses it as the form's `action`
 attribute. This allows a user to upload an image, which gets stored in
@@ -99,7 +99,7 @@ URL maps to the `ImageAnalysisServlet` class.
 The core of the logic in
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/image-analysis/examples/image-analyzer/src/main/java/com/google/sps/servlets/ImageAnalysisServlet.java">
-  ImageAnalysisServlet.java
+ImageAnalysisServlet.java
 </walkthrough-editor-open-file>
 is this code:
 
@@ -132,10 +132,10 @@ and then run a dev server.
 
 Check out these resources for more information:
 
--   [Cloud Vision API](https://cloud.google.com/vision/)
--   [Cloud Vision API Quickstart](https://cloud.google.com/vision/docs/quickstart-client-libraries#client-libraries-install-java)
--   [Cloud Vision API Client Libraries](https://cloud.google.com/vision/docs/libraries)
--   [Cloud Vision API How-to Guides](https://cloud.google.com/vision/docs/how-to)
+- [Cloud Vision API](https://cloud.google.com/vision/)
+- [Cloud Vision API Quickstart](https://cloud.google.com/vision/docs/quickstart-client-libraries#client-libraries-install-java)
+- [Cloud Vision API Client Libraries](https://cloud.google.com/vision/docs/libraries)
+- [Cloud Vision API How-to Guides](https://cloud.google.com/vision/docs/how-to)
 
 ## Your Turn
 
@@ -149,24 +149,24 @@ continuing.
 Try to break this goal down into smaller steps, and then take each step on
 individually.
 
--   Add the Cloud Vision dependency to your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file>
-    file.
--   Modify your servlet that handles file upload requests to also fetch labels
-    for the uploaded image.
-    -   Test that this works by printing the labels to the console.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   Add the labels to the JSON returned by your servlet.
-    -   Test that this works by running a dev server and viewing the JSON in your
-        browser.
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
--   Add JavaScript code that reads the labels from the JSON and displays them
-    under the `<img>` tag.
+- Add the Cloud Vision dependency to your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file>
+  file.
+- Modify your servlet that handles file upload requests to also fetch labels
+  for the uploaded image.
+  - Test that this works by printing the labels to the console.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- Add the labels to the JSON returned by your servlet.
+  - Test that this works by running a dev server and viewing the JSON in your
+    browser.
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
+- Add JavaScript code that reads the labels from the JSON and displays them
+  under the `<img>` tag.
 
 If you follow those steps, your portfolio should contain a working image
 analysis feature!
@@ -178,7 +178,7 @@ you can deploy it to your live server!
 
 Your
 <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:
