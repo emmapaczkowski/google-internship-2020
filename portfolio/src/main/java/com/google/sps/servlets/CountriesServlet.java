@@ -29,6 +29,15 @@ public class CommentServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+      String countryName = getParameter(request, "country-input", "empty country");
+
+      Entity newCountry = new Entity("Country");
+
+      newCountry.setProperty("countryName", countryName);
+
+      DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+      datastore.put(newCountry)
+
     
     response.sendRedirect("https://8080-03adb9af-0470-4f43-b5b3-40607f387072.us-west1.cloudshell.dev/?authuser=0");
   }
