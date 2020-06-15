@@ -222,6 +222,34 @@ var kingstonMarker = new google.maps.Marker({
 }
 
 /**
+ * Builds the Geo Chart UI.
+ */
+ function initGeoChart() { 
+    google.charts.load('current', {
+            'packages':['geochart'],
+            'mapsApiKey': 'AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+            ['Country', 'Popularity'],
+            ['Germany', 200],
+            ['United States', 300],
+            ['Brazil', 400],
+            ['Canada', 500],
+            ['France', 600],
+            ['RU', 700]
+            ]);
+
+            var options = {};
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+      }
+ }
+/**
  * Builds the comments UI.
  */
 //function called by blogposts.html's body onload 
@@ -264,3 +292,4 @@ function createHTML(type, content) {
  htmlElement.innerHTML = content;
  return htmlElement;
 }
+
