@@ -48,10 +48,16 @@
     </head>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initMap" async defer></script>
-    
-     <div id="regions_div" ></div>
+
+     <div id="geo-chart" ></div>
     <script src="https://www.gstatic.com/charts/loader.js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initGeoChart" async defer></script>
     
+
+    <form action="/geo-chart" method="POST">
+      <label for="country-input">Country</label></br>
+      <input type="text" name="country-input" placeholder="Country"></br></br>
+      <input class="submit-btn" type="submit" value="Submit Country"/></br></br>
+    </form>
 
 
     <h6>
