@@ -114,6 +114,7 @@ function initMap() {
   center: center,
   zoom: 2.5
  });
+
  var PGMarker = new google.maps.Marker({
   position: princeGeorge,
   map: map
@@ -249,10 +250,10 @@ var kingstonMarker = new google.maps.Marker({
             chart.draw(data, options);
       }
  }
+
 /**
  * Builds the comments UI.
  */
-//function called by blogposts.html's body onload 
 function displayComments() {
  let commentsQuantity = document.getElementById('commentsQuantity').value;
  fetch("/add-comment?commentsQuantity=" + commentsQuantity).then(response => response.json()).then((comments) => {
@@ -276,10 +277,8 @@ function createComment(comment) {
  });
 
  const contentElement = createHTML('h6', comment.message);
-
  let commentHTML = document.createElement('div');
  commentHTML.className = "comment";
-
  let commentElements = [headerHTML, contentElement];
  commentElements.forEach((htmlElement) => {
   commentHTML.appendChild(htmlElement)
@@ -292,4 +291,3 @@ function createHTML(type, content) {
  htmlElement.innerHTML = content;
  return htmlElement;
 }
-
