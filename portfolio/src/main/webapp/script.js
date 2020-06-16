@@ -230,7 +230,6 @@ var kingstonMarker = new google.maps.Marker({
             'mapsApiKey': 'AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM'
         });
         google.charts.setOnLoadCallback(drawRegionsMap);
-
         function drawRegionsMap() {
             var data = google.visualization.arrayToDataTable([
             ['Country', 'Popularity'],
@@ -243,12 +242,11 @@ var kingstonMarker = new google.maps.Marker({
             ]);
 
             var options = {};
-
             var chart = new google.visualization.GeoChart(document.getElementById('geo-chart'));
-
             chart.draw(data, options);
       }
  }
+
 /**
  * Builds the comments UI.
  */
@@ -267,7 +265,6 @@ function displayComments() {
 function createComment(comment) {
  const nameElement = createHTML('h6', comment.name);
  const timeElement = createHTML('h6', comment.time);
-
  let headerHTML = document.createElement('div');
  headerHTML.className = "comment-heading";
  let headerElements = [nameElement, timeElement]
@@ -276,10 +273,8 @@ function createComment(comment) {
  });
 
  const contentElement = createHTML('h6', comment.message);
-
  let commentHTML = document.createElement('div');
  commentHTML.className = "comment";
-
  let commentElements = [headerHTML, contentElement];
  commentElements.forEach((htmlElement) => {
   commentHTML.appendChild(htmlElement)
