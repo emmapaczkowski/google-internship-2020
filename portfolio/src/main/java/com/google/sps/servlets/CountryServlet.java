@@ -33,7 +33,7 @@ public class CountryServlet extends HttpServlet {
 
       Entity newCountry = new Entity("Country");
 
-      newCountry.setProperty("countryName", countryName);
+      newCountry.setProperty("countryName", theCountryName);
 
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
       datastore.put(newCountry);
