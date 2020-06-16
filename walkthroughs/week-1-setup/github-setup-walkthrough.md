@@ -99,10 +99,10 @@ To give your host access to your repo, add them as a collaborator.
 
 1.  Navigate to your repo's page in GitHub.
 1.  Go to the `Settings` tab.
-1.  Select `Collaborators`. (*Note*: If you don't see this,
+1.  Select `Collaborators`. (_Note_: If you don't see this,
     look for `Manage Access` -> `Invite a Collaborator` instead)
 1.  Add your host using their GitHub username or email address (you can send
-them a quick message to confirm their Github username).
+    them a quick message to confirm their Github username).
 
 Your host can now help with code reviews.
 
@@ -117,8 +117,7 @@ set your repo to require pull requests.
 3.  Select `Branches`.
 4.  Click the `Add rule` button.
 5.  Type `master` into the `Branch name pattern` text box.
-6.  Select `Require pull request reviews before merging` and `Include
-    administrators`.
+6.  Select `Require pull request reviews before merging` and `Include administrators`.
 7.  Click `Create`.
 8.  Click `Save changes`.
 

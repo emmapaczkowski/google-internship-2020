@@ -47,12 +47,12 @@ You should see a webpage that shows a pie chart.
 Read through the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/charts/examples/hello-world/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 and
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/charts/examples/hello-world/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 files to see how they add the chart to the page.
 
@@ -100,12 +100,12 @@ shows bigfoot sightings over time.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/charts/examples/bigfoot-sightings/src/main/java/com/google/sps/servlets/BigfootDataServlet.java">
-  BigfootDataServlet.java
+BigfootDataServlet.java
 </walkthrough-editor-open-file>
 file loads the CSV file and converts it into JSON. Then the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/charts/examples/bigfoot-sightings/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file fetches this JSON and uses it to create a chart.
 
@@ -145,7 +145,7 @@ shows a chart of color votes.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/charts/examples/favorite-colors/src/main/java/com/google/sps/servlets/ColorDataServlet.java">
-  ColorDataServlet.java
+ColorDataServlet.java
 </walkthrough-editor-open-file>
 file contains a `doGet()` function that returns the color votes as JSON, and a
 `doPost()` function that allows users to submit votes.
@@ -153,7 +153,7 @@ file contains a `doGet()` function that returns the color votes as JSON, and a
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/charts/examples/favorite-colors/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file fetches this JSON and uses it to create a chart.
 
@@ -173,7 +173,7 @@ deploy it to your live server!
 
 Your
 <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:

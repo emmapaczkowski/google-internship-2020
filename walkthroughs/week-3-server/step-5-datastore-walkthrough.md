@@ -58,7 +58,7 @@ Datastore comes with the App Engine environment, so to use Datastore, first add
 the App Engine dependency to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file:
 
@@ -78,7 +78,7 @@ Engine SDK, which includes Datastore.
 Open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/todo-list/src/main/java/com/google/sps/servlets/NewTaskServlet.java">
-  NewTaskServlet.java
+NewTaskServlet.java
 </walkthrough-editor-open-file>
 file in the `todo-list` directory to see how it uses Datastore to save a task.
 
@@ -104,15 +104,15 @@ An entity has a **kind**, which is similar to a class name.
 Look at the `doPost()` function in the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/todo-list/src/main/java/com/google/sps/servlets/NewTaskServlet.java">
-  NewTaskServlet.java
+NewTaskServlet.java
 </walkthrough-editor-open-file>
-file to see how it creates an `Entity` by giving it a *kind* of `Task`:
+file to see how it creates an `Entity` by giving it a _kind_ of `Task`:
 
 ```java
 Entity taskEntity = new Entity("Task");
 ```
 
-This line of code creates an `Entity` with a *kind* of `Task` and stores it in a
+This line of code creates an `Entity` with a _kind_ of `Task` and stores it in a
 `taskEntity` variable.
 
 An entity also has **properties**, similar to how a class can have variables.
@@ -146,7 +146,7 @@ you need it.
 Modify your
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-  DataServlet.java
+DataServlet.java
 </walkthrough-editor-open-file>
 file to store the comments as entities in Datastore. Get this working before
 you worry about loading the data.
@@ -173,7 +173,7 @@ requests it.
 The `todo-list` example contains a
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/todo-list/src/main/java/com/google/sps/servlets/ListTasksServlet.java">
-  ListTasksServlet.java
+ListTasksServlet.java
 </walkthrough-editor-open-file>
 file that loads entities from Datastore.
 
@@ -200,7 +200,7 @@ app is shut down or restarted.
 Next, add some code to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-  DataServlet.java
+DataServlet.java
 </walkthrough-editor-open-file>
 file that loads comments from Datastore.
 
@@ -228,6 +228,6 @@ teachme ~/step/walkthroughs/week-3-server/comments-walkthrough.md
 This tutorial covered the fundamentals of how to use Datastore, but Datastore
 also provides more advanced functionality. See these resources for more info:
 
--   [Datastore documentation](https://cloud.google.com/datastore/docs/)
--   [Entities documentation](https://cloud.google.com/datastore/docs/concepts/entities)
--   [Datastore API](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/datastore/package-summary)
+- [Datastore documentation](https://cloud.google.com/datastore/docs/)
+- [Entities documentation](https://cloud.google.com/datastore/docs/concepts/entities)
+- [Datastore API](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/datastore/package-summary)

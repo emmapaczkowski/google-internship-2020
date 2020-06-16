@@ -16,26 +16,34 @@
  * Fetches stats from the servers and adds them to the DOM.
  */
 function getServerStats() {
-  fetch('/server-stats').then(response => response.json()).then((stats) => {
-    // stats is an object, not a string, so we have to
-    // reference its fields to create HTML content
+  fetch("/server-stats")
+    .then((response) => response.json())
+    .then((stats) => {
+      // stats is an object, not a string, so we have to
+      // reference its fields to create HTML content
 
-    const statsListElement = document.getElementById('server-stats-container');
-    statsListElement.innerHTML = '';
-    statsListElement.appendChild(
-        createListElement('Start time: ' + stats.startTime));
-    statsListElement.appendChild(
-        createListElement('Current time: ' + stats.currentTime));
-    statsListElement.appendChild(
-        createListElement('Max memory: ' + stats.maxMemory));
-    statsListElement.appendChild(
-        createListElement('Used memory: ' + stats.usedMemory));
-  });
+      const statsListElement = document.getElementById(
+        "server-stats-container"
+      );
+      statsListElement.innerHTML = "";
+      statsListElement.appendChild(
+        createListElement("Start time: " + stats.startTime)
+      );
+      statsListElement.appendChild(
+        createListElement("Current time: " + stats.currentTime)
+      );
+      statsListElement.appendChild(
+        createListElement("Max memory: " + stats.maxMemory)
+      );
+      statsListElement.appendChild(
+        createListElement("Used memory: " + stats.usedMemory)
+      );
+    });
 }
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {
-  const liElement = document.createElement('li');
+  const liElement = document.createElement("li");
   liElement.innerText = text;
   return liElement;
 }

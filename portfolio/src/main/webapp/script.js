@@ -92,3 +92,47 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {center: canmore, zoom: 10});
   var marker = new google.maps.Marker({position: canmore, map: map});
 }
+
+/**
+ * Builds the comments UI.
+ */
+//function called by blogposts.html's body onload 
+function displayComments() {
+  let commentsQuantity = document.getElementById('commentsQuantity').value;
+  fetch("/add-comment?commentsQuantity="+commentsQuantity).then(response => response.json()).then((comments) => {
+      const commentContainer = document.getElementById('comments-container');
+      commentContainer.innerHTML = "";
+      comments.forEach((comment) => {
+        commentContainer.appendChild(createComment(comment))
+      });
+    });
+}
+
+function createComment(comment) {
+  const nameElement = createHTML('h4', comment.name);
+  const timeElement = createHTML('h5', comment.time);
+
+  let headerHTML = document.createElement('div');
+  headerHTML.className = "comment-heading";
+  let headerElements = [nameElement, timeElement]
+  headerElements.forEach((htmlElement) => {
+    headerHTML.appendChild(htmlElement)
+  });
+  
+  const contentElement = createHTML('h4', comment.message);
+
+  let commentHTML = document.createElement('div');
+  commentHTML.className = "comment";
+  
+  let commentElements = [headerHTML, contentElement];
+  commentElements.forEach((htmlElement) => {
+    commentHTML.appendChild(htmlElement)
+  });
+  return commentHTML;
+}
+
+function createHTML(type, content) {
+    const htmlElement = document.createElement(type);
+    htmlElement.innerHTML = content;
+    return htmlElement;
+}

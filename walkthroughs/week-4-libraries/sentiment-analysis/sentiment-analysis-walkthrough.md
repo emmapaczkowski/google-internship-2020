@@ -32,14 +32,14 @@ add extra features if you have time left over.
 tools designed for parsing and understanding **unstructured text**, also called
 [natural language](https://en.wikipedia.org/wiki/Natural_language). For example:
 
--   [Sentiment analysis](https://en.wikipedia.org/wiki/Sentiment_analysis)
-    measures the positivity or negativity of text. *Is this text happy or
-    unhappy?*
--   [Entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
-    extracts entities (people, places, things) from text. *Who or what does this
-    text mention?*
--   [Content classification](https://en.wikipedia.org/wiki/Document_classification)
-    categorizes topics form text. *What topics does this text contain?*
+- [Sentiment analysis](https://en.wikipedia.org/wiki/Sentiment_analysis)
+  measures the positivity or negativity of text. _Is this text happy or
+  unhappy?_
+- [Entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition)
+  extracts entities (people, places, things) from text. _Who or what does this
+  text mention?_
+- [Content classification](https://en.wikipedia.org/wiki/Document_classification)
+  categorizes topics form text. _What topics does this text contain?_
 
 The Cloud Natural Language APIs use machine learning models that have already
 been trained, so you can skip straight to the fun stuff. It's also possible to
@@ -84,7 +84,7 @@ To use the Cloud Natural Language library, first add the App Engine dependency
 to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file:
 
@@ -105,7 +105,7 @@ but it's probably easiest to work through an example.
 Read through
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/sentiment-analysis/examples/sentiment-analyzer/src/main/java/com/google/sps/servlets/SentimentAnalysisServlet.java">
-  SentimentAnalysisServlet.java
+SentimentAnalysisServlet.java
 </walkthrough-editor-open-file>
 and find this code:
 
@@ -137,34 +137,34 @@ analysis to the comments you implemented in week 2.
 Try to break this goal down into smaller steps, and then take each step on
 individually.
 
--   Add the Cloud Natural Language dependency to your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file>
-    file.
--   Modify your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-      DataServlet.java
-    </walkthrough-editor-open-file>
-    to calculate the sentiment score of the comment entered by the user.
-    -   Test that this works by printing it out to the console:
-        `System.out.println()` is your friend!
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
--   Add the sentiment score to your comment storage. This might mean creating a
-    new class that contains the message and the score.
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
--   Add the sentiment score to the JSON returned by your servlet.
-    -   Test that this works by running a dev server and viewing the JSON in your
-        browser.
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
--   Add JavaScript code that reads the sentiment score from the JSON and
-    displays it. To get started, consider displaying the score in parentheses
-    after the text of the comment.
+- Add the Cloud Natural Language dependency to your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file>
+  file.
+- Modify your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
+  DataServlet.java
+  </walkthrough-editor-open-file>
+  to calculate the sentiment score of the comment entered by the user.
+  - Test that this works by printing it out to the console:
+    `System.out.println()` is your friend!
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
+- Add the sentiment score to your comment storage. This might mean creating a
+  new class that contains the message and the score.
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
+- Add the sentiment score to the JSON returned by your servlet.
+  - Test that this works by running a dev server and viewing the JSON in your
+    browser.
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
+- Add JavaScript code that reads the sentiment score from the JSON and
+  displays it. To get started, consider displaying the score in parentheses
+  after the text of the comment.
 
 If you follow those steps, your portfolio should contain a working sentiment
 analysis feature!
@@ -177,7 +177,7 @@ deploy it to your live server!
 Your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:
@@ -206,10 +206,10 @@ This walkthrough introduced one kind of natural language processing, but the
 Cloud Natural Language library contains several other types of processing. If
 this is interesting to you, you can find more info here:
 
--   [Cloud Natural Language](https://cloud.google.com/natural-language)
--   [Analyzing Entities](https://cloud.google.com/natural-language/docs/analyzing-entities)
--   [Classifying Content](https://cloud.google.com/natural-language/docs/classifying-text)
--   [Interpreting Sentiment Analysis Values](https://cloud.google.com/natural-language/docs/basics#interpreting_sentiment_analysis_values)
+- [Cloud Natural Language](https://cloud.google.com/natural-language)
+- [Analyzing Entities](https://cloud.google.com/natural-language/docs/analyzing-entities)
+- [Classifying Content](https://cloud.google.com/natural-language/docs/classifying-text)
+- [Interpreting Sentiment Analysis Values](https://cloud.google.com/natural-language/docs/basics#interpreting_sentiment_analysis_values)
 
 If you have time left over and want to go further, consider adding a feature
 that allows users to filter out comments with a negative sentiment score!

@@ -17,7 +17,7 @@ Click the **Start** button to begin!
 
 You'll hear these words a lot, so let's start by defining them.
 
-A [client](https://en.wikipedia.org/wiki/Client_\(computing\)) is whatever
+A [client](<https://en.wikipedia.org/wiki/Client_(computing)>) is whatever
 you're using to interact with the internet. It's the web browser you're using to
 read this page. The web browser on your computer is one client, the web browser
 on your phone is another client. There are other types of clients (like watching
@@ -28,7 +28,7 @@ computer (or phone, or whatever device you're using). When we talk about
 "client-side", or something that happens "in the client", we mean it happens on
 your device.
 
-A [server](https://en.wikipedia.org/wiki/Server_\(computing\)) is a computer
+A [server](<https://en.wikipedia.org/wiki/Server_(computing)>) is a computer
 that **serves** content based on a request. The server is the computer that your
 browser is talking to when your browser asks for a particular URL.
 
@@ -50,29 +50,28 @@ To see an example, explore the `examples/page-view-counter` directory.
 Specifically, open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/page-view-counter/src/main/java/com/google/sps/servlets/PageViewServlet.java">
-  PageViewServlet.java
+PageViewServlet.java
 </walkthrough-editor-open-file>
 file. This is a servlet class that handles the `/page-views` URL and responds
 with HTML that contains a count of how many times the page has been loaded.
 
 This file contains a few interesting lines:
 
--   `@WebServlet("/page-views")` is an
-    [annotation](https://en.wikipedia.org/wiki/Java_annotation) that tells our
-    server which URL this servlet maps to. When a client requests the
-    `/page-views` URL, this servlet is triggered.
--   The `doGet()` function runs whenever a client sends a `GET` request to the
-    servlet's URL. (Your browser sends a `GET` request whenever you visit a
-    URL.)
--   `pageViews++;` increments the `pageViews` variable. Since the `doGet()`
-    function runs every time the `/page-views` URL is requested, this means the
-    `pageViews` variable tracks how many times the page has been viewed.
--   `response.setContentType("text/html;");` specifies what type of content the
-    client should expect.
--   `response.getWriter().println("<h1>Page Views</h1>");` prints an `<h1>` tag
-    to the response.
--   `response.getWriter().println("<p>This page has been viewed " + pageViews +
-    " times.</p>");` prints the page view count to the response.
+- `@WebServlet("/page-views")` is an
+  [annotation](https://en.wikipedia.org/wiki/Java_annotation) that tells our
+  server which URL this servlet maps to. When a client requests the
+  `/page-views` URL, this servlet is triggered.
+- The `doGet()` function runs whenever a client sends a `GET` request to the
+  servlet's URL. (Your browser sends a `GET` request whenever you visit a
+  URL.)
+- `pageViews++;` increments the `pageViews` variable. Since the `doGet()`
+  function runs every time the `/page-views` URL is requested, this means the
+  `pageViews` variable tracks how many times the page has been viewed.
+- `response.setContentType("text/html;");` specifies what type of content the
+  client should expect.
+- `response.getWriter().println("<h1>Page Views</h1>");` prints an `<h1>` tag
+  to the response.
+- `response.getWriter().println("<p>This page has been viewed " + pageViews + " times.</p>");` prints the page view count to the response.
 
 To see this in action, `cd` into the `page-view-counter` directory and then run
 a development server:
@@ -103,7 +102,7 @@ so it maps to a different URL, like `/content` or `/mypage.html`.
 The `portfolio` directory contains a servlet in the
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-  DataServlet.java
+DataServlet.java
 </walkthrough-editor-open-file>
 file.
 

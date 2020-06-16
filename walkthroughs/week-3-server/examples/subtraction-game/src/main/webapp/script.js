@@ -16,26 +16,28 @@
  * Fetches the current state of the game and builds the UI.
  */
 function getSubtractionGame() {
-  fetch('/subtraction-game').then(response => response.json()).then((game) => {
-    const totalEl = document.getElementById('total');
-    if (game.gameOver) {
-      // The current game is over, show the total for the next game.
-      totalEl.innerText = 'Total: 21';
-    } else {
-      totalEl.innerText = 'Total: ' + game.currentTotal;
-    }
+  fetch("/subtraction-game")
+    .then((response) => response.json())
+    .then((game) => {
+      const totalEl = document.getElementById("total");
+      if (game.gameOver) {
+        // The current game is over, show the total for the next game.
+        totalEl.innerText = "Total: 21";
+      } else {
+        totalEl.innerText = "Total: " + game.currentTotal;
+      }
 
-    // Build the list of history entries.
-    const historyEl = document.getElementById('history');
-    game.history.forEach((line) => {
-      historyEl.appendChild(createListElement(line));
+      // Build the list of history entries.
+      const historyEl = document.getElementById("history");
+      game.history.forEach((line) => {
+        historyEl.appendChild(createListElement(line));
+      });
     });
-  });
 }
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {
-  const liElement = document.createElement('li');
+  const liElement = document.createElement("li");
   liElement.innerText = text;
   return liElement;
 }
