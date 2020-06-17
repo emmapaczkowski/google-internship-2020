@@ -20,13 +20,13 @@ function randomizeImage() {
   // The images directory contains 13 images, so generate a random index between
   // 1 and 13.
   const imageIndex = Math.floor(Math.random() * 13) + 1;
-  const imgUrl = 'images/stanley-' + imageIndex + '.jpg';
+  const imgUrl = "images/stanley-" + imageIndex + ".jpg";
 
-  const imgElement = document.createElement('img');
+  const imgElement = document.createElement("img");
   imgElement.src = imgUrl;
 
-  const imageContainer = document.getElementById('random-image-container');
+  const imageContainer = document.getElementById("random-image-container");
   // Remove the previous image.
-  imageContainer.innerHTML = '';
+  imageContainer.innerHTML = "";
   imageContainer.appendChild(imgElement);
 }

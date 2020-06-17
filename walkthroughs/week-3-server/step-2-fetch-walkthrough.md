@@ -38,22 +38,22 @@ that fetches a random quote from the server.
 
 The project contains a few interesting files:
 
--   <walkthrough-editor-open-file
-        filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/java/com/google/sps/servlets/RandomQuoteServlet.java">
-      RandomQuoteServlet.java
-    </walkthrough-editor-open-file>
-    is a servlet that responds with a random quote when a client requests the
-    `/random-quote` URL.
--   <walkthrough-editor-open-file
-        filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/index.html">
-      index.html
-    </walkthrough-editor-open-file>
-    is the static HTML content, including the button.
--   <walkthrough-editor-open-file
-        filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/script.js">
-      script.js
-    </walkthrough-editor-open-file>
-    is JavaScript that fetches content from the server and adds it to the DOM.
+- <walkthrough-editor-open-file
+      filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/java/com/google/sps/servlets/RandomQuoteServlet.java">
+  RandomQuoteServlet.java
+  </walkthrough-editor-open-file>
+  is a servlet that responds with a random quote when a client requests the
+  `/random-quote` URL.
+- <walkthrough-editor-open-file
+      filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/index.html">
+  index.html
+  </walkthrough-editor-open-file>
+  is the static HTML content, including the button.
+- <walkthrough-editor-open-file
+      filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/script.js">
+  script.js
+  </walkthrough-editor-open-file>
+  is JavaScript that fetches content from the server and adds it to the DOM.
 
 The next few steps walk through these files in more detail.
 
@@ -91,7 +91,7 @@ from the server and adds it to an existing HTML file.
 Open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file to see an example.
 
@@ -120,8 +120,8 @@ The `responsePromise.then(handleResponse);` line tells JavaScript to call the
 If you're new to the concept of promises, read through these resources to learn
 more:
 
--   [JavaScript Promises: an Introduction](https://developers.google.com/web/fundamentals/primers/promises)
--   [Using Promises - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [JavaScript Promises: an Introduction](https://developers.google.com/web/fundamentals/primers/promises)
+- [Using Promises - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 If you want more help, try searching "JavaScript Promises" on Google, or ask in
 the chat!
@@ -178,12 +178,12 @@ responds with `"Hello [YourName]!"` when a client requests the `/data` URL.
 Modify
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 and
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/random-quotes/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 to use `fetch()` to request this content from the server and add it to the
 page. You can use a button like the example above, or you can use the `onload`

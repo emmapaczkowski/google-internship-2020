@@ -21,7 +21,7 @@ single string value from the server, but you'll normally want to return more
 than one value in the response from a server. For example,
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-  DataServlet.java
+DataServlet.java
 </walkthrough-editor-open-file>
 will eventually return a list of comments, rather than a single string.
 
@@ -41,16 +41,15 @@ or by Googling for JSON tutorials.
 
 The JSON format specifies a few rules:
 
--   Objects are enclosed in `{ }` curly brackets.
--   Objects contain `key: value` pairs. Pairs are separated by commas.
--   Field names and string values should be enclosed in `" "` double quotes.
--   Arrays are enclosed in `[ ]` square brackets.
+- Objects are enclosed in `{ }` curly brackets.
+- Objects contain `key: value` pairs. Pairs are separated by commas.
+- Field names and string values should be enclosed in `" "` double quotes.
+- Arrays are enclosed in `[ ]` square brackets.
 
 For example, here is an object with a `name` and a `birthYear` field:
 
 ```json
-
-{"name": "Ada", "birthYear": 1815}
+{ "name": "Ada", "birthYear": 1815 }
 ```
 
 In JavaScript, you would be able to access this object's `.name` and
@@ -60,9 +59,9 @@ Here is an array that contains three objects:
 
 ```json
 [
-  {"name": "Ada", "birthYear": 1815},
-  {"name": "Grace", "birthYear": 1906},
-  {"name": "Alan", "birthYear": 1912}
+  { "name": "Ada", "birthYear": 1815 },
+  { "name": "Grace", "birthYear": 1906 },
+  { "name": "Alan", "birthYear": 1912 }
 ]
 ```
 
@@ -79,9 +78,9 @@ objects:
 ```json
 {
   "people": [
-    {"name": "Ada", "birthYear": 1815},
-    {"name": "Grace", "birthYear": 1906},
-    {"name": "Alan", "birthYear": 1912}
+    { "name": "Ada", "birthYear": 1815 },
+    { "name": "Grace", "birthYear": 1906 },
+    { "name": "Alan", "birthYear": 1912 }
   ]
 }
 ```
@@ -99,7 +98,7 @@ that is by manually building the string yourself.
 The `server-stats` directory contains an example that uses JSON. Open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/server-stats/src/main/java/com/google/sps/servlets/ServerStatsServlet.java">
-  ServerStatsServlet.java
+ServerStatsServlet.java
 </walkthrough-editor-open-file>
 file. This class creates an instance of a `ServerStats` class, and its
 `convertToJson()` function converts that instance to a JSON-formatted string
@@ -118,7 +117,7 @@ yourself, you can use a library that does it for you!
 formats Java objects as JSON strings. The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/server-stats/src/main/java/com/google/sps/servlets/ServerStatsServlet.java">
-  ServerStatsServlet.java
+ServerStatsServlet.java
 </walkthrough-editor-open-file>
 file contains an example `convertToJsonUsingGson()` function that converts a
 `ServerStats` instance to JSON using the Gson library.
@@ -129,7 +128,7 @@ function is the same JSON string. You can use whichever approach you prefer.
 **Note:** To use Gson, first add this dependency to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file:
 
@@ -156,19 +155,20 @@ you can use in JavaScript.
 Here's an example:
 
 ```javascript
-fetch('/my-data-url')  // sends a request to /my-data-url
-.then(response => response.json()) // parses the response as JSON
-.then((myObject) => { // now we can reference the fields in myObject!
-  console.log(myObject.x);
-  console.log(myObject.y);
-  console.log(myObject.z);
-});
+fetch("/my-data-url") // sends a request to /my-data-url
+  .then((response) => response.json()) // parses the response as JSON
+  .then((myObject) => {
+    // now we can reference the fields in myObject!
+    console.log(myObject.x);
+    console.log(myObject.y);
+    console.log(myObject.z);
+  });
 ```
 
 To see a more complete example, look at the example
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/server-stats/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file in the `server-stats` directory. The `getServerStats()` function calls
 `fetch()`, parses the response as JSON, and then uses the object to build HTML
@@ -185,12 +185,12 @@ and to write JavaScript that builds a UI from that data.
 To get closer to this goal, modify
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-  DataServlet.java
+DataServlet.java
 </walkthrough-editor-open-file>
 to return some hard-coded JSON data, and then modify
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 to fetch that JSON and build a UI from it. To break it down into smaller steps:
 

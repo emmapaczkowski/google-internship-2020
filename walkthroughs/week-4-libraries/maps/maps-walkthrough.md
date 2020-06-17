@@ -50,7 +50,7 @@ is another example.
 The `examples` directory contains a `hello-world` project. Modify its
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/maps/examples/hello-world/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 file to include your API key where it currently contains `YOUR_API_KEY`. Then
 `cd` into the `hello-world` directory and run a dev server:
@@ -64,12 +64,12 @@ You should see a webpage that shows a Google Map.
 Read through the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/maps/examples/hello-world/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 and
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/maps/examples/hello-world/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 files to see how they add a Google Map to the page.
 
@@ -92,9 +92,9 @@ You can also modify its styling, or change how it interacts with the user.
 
 To learn about these options, read through this documentation:
 
--   [MapOptions](https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions)
--   [Map Types](https://developers.google.com/maps/documentation/javascript/maptypes)
--   [Styling Your Map](https://developers.google.com/maps/documentation/javascript/styling)
+- [MapOptions](https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions)
+- [Map Types](https://developers.google.com/maps/documentation/javascript/maptypes)
+- [Styling Your Map](https://developers.google.com/maps/documentation/javascript/styling)
 
 Customize your map so it looks and behaves the way you want!
 
@@ -103,15 +103,15 @@ Customize your map so it looks and behaves the way you want!
 The Google Maps library supports adding **markers** which are pins that show
 specific locations. To learn about markers, read through this documentation:
 
--   [Adding a Google Map with a Marker to Your Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
--   [Markers](https://developers.google.com/maps/documentation/javascript/markers)
--   [Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers)
+- [Adding a Google Map with a Marker to Your Website](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
+- [Markers](https://developers.google.com/maps/documentation/javascript/markers)
+- [Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers)
 
 The `examples` directory contains a `marker` example to help you get started.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/maps/examples/marker/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file contains code that adds a marker to a Google Map.
 
@@ -187,11 +187,11 @@ file. Remember: try to keep each pull request as small as possible!
 In addition to markers and info windows, Google Maps supports different kinds of
 visualizations. Read through this documentation to learn more:
 
--   [Visualizing Data](https://developers.google.com/maps/documentation/javascript/earthquakes)
--   [Importing Data into Google Maps](https://developers.google.com/maps/documentation/javascript/importing_data)
--   [Combining Data](https://developers.google.com/maps/documentation/javascript/combining-data)
--   [Shapes](https://developers.google.com/maps/documentation/javascript/shapes)
--   [Displaying data](https://developers.google.com/maps/documentation/javascript/layers)
+- [Visualizing Data](https://developers.google.com/maps/documentation/javascript/earthquakes)
+- [Importing Data into Google Maps](https://developers.google.com/maps/documentation/javascript/importing_data)
+- [Combining Data](https://developers.google.com/maps/documentation/javascript/combining-data)
+- [Shapes](https://developers.google.com/maps/documentation/javascript/shapes)
+- [Displaying data](https://developers.google.com/maps/documentation/javascript/layers)
 
 You could also use
 [Google Dataset Search](https://toolbox.google.com/datasetsearch) to find
@@ -206,7 +206,7 @@ deploy it to your live server!
 
 Your
 <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:

@@ -75,7 +75,7 @@ called from many languages. You're going to use it as a Java library.
 To use the Cloud Translation library, first add the dependency to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file.
 
@@ -96,7 +96,7 @@ and the next few steps work through an example.
 Read through
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/translation/examples/minimal-google-translate/src/main/java/com/google/sps/servlets/TranslationServlet.java">
-  TranslationServlet.java
+TranslationServlet.java
 </walkthrough-editor-open-file>
 and find this code:
 
@@ -124,11 +124,11 @@ stands for a specific language. You can view a full list
 [here](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), but here are some
 examples:
 
--   `zh`: Chinese
--   `en`: English
--   `hi`: Hindi
--   `es`: Spanish
--   `ar`: Arabic
+- `zh`: Chinese
+- `en`: English
+- `hi`: Hindi
+- `es`: Spanish
+- `ar`: Arabic
 
 ## Your Turn
 
@@ -138,31 +138,31 @@ comments you implemented in week 2.
 Try to break this goal down into smaller steps, and then take each step on
 individually.
 
--   Add the Cloud Translate dependency to your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file> file.
--   Add a language dropdown to your portfolio page. When the user changes the
-    dropdown, resend the `GET` request for the comments JSON. Add the language
-	code to the request using a
-    [query string](https://en.wikipedia.org/wiki/Query_string).
-    -   Test that this works by getting the value of the language code on the
-        servlet and printing it to the console. `System.out.println()` is your
-        friend!
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
--   In your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-      DataServlet.java
-    </walkthrough-editor-open-file>
-    file, use the language code to translate each message before you convert it
-    to JSON.
-    -   Test that this works by running a dev server and viewing the JSON in your
-        browser.
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
+- Add the Cloud Translate dependency to your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file> file.
+- Add a language dropdown to your portfolio page. When the user changes the
+  dropdown, resend the `GET` request for the comments JSON. Add the language
+  code to the request using a
+  [query string](https://en.wikipedia.org/wiki/Query_string).
+  - Test that this works by getting the value of the language code on the
+    servlet and printing it to the console. `System.out.println()` is your
+    friend!
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
+- In your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
+  DataServlet.java
+  </walkthrough-editor-open-file>
+  file, use the language code to translate each message before you convert it
+  to JSON.
+  - Test that this works by running a dev server and viewing the JSON in your
+    browser.
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
 
 If you follow those steps, your portfolio should contain a dropdown that allows
 users to translate comments!
@@ -175,7 +175,7 @@ deploy it to your live server!
 Your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:

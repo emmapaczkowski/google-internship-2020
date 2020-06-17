@@ -175,7 +175,7 @@ world, you can deploy it to your live server!
 
 Last week, you should have added your project ID to your
 <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file. If so, you can deploy to your live server by executing this command from
 the `portfolio` directory:
@@ -184,11 +184,11 @@ the `portfolio` directory:
 mvn package appengine:deploy
 ```
 
--   The first time you run this command, the console will give you a link. Open
-    that link, and login to that page using your `@google.com` account.
--   After you login, you'll see a long string of characters. Copy those
-    characters.
--   Paste the characters into the console and press enter.
+- The first time you run this command, the console will give you a link. Open
+  that link, and login to that page using your `@google.com` account.
+- After you login, you'll see a long string of characters. Copy those
+  characters.
+- Paste the characters into the console and press enter.
 
 After the command successfully completes, you can navigate to
 `YOUR_PROJECT_ID.appspot.com` to see your portfolio and test your comments
@@ -206,22 +206,22 @@ works and is submitted to your GitHub repo by the end of the week.
 If you have some time left over and you want to learn more, here are a few ideas
 for what to do next:
 
--   Extend your servlet to support full
-    [pagination](https://medium.com/uxness/best-practices-for-designing-pagination-in-web-1c33140f31b),
-    rather than always returning the first N results.
--   Support deletion of specific comments. You'll need a way to uniquely identify
-    comments, and a way to include that identifier in your request to the server.
--   Add a text field that allows users to specify their name as well as a
-    comment. If you want to go even farther, consider adding a way to filter
-    comments by the user that made them.
--   Add a dropdown box that allows users to add a mood (like happy or sad) to
-    their comments. Check out the HTML
-    [\<select\> tag](https://www.w3schools.com/tags/tag_select.asp) for this one.
--   Allow users to change the order that comments display: newest first, oldest
-    first, longest first, etc.
--   Improve error handling and security. What if a user enters HTML content or
-    JavaScript code in one of their comments? Try googling "HTML injection" or
-    "Cross-site scripting" for examples of why this might be an issue.
+- Extend your servlet to support full
+  [pagination](https://medium.com/uxness/best-practices-for-designing-pagination-in-web-1c33140f31b),
+  rather than always returning the first N results.
+- Support deletion of specific comments. You'll need a way to uniquely identify
+  comments, and a way to include that identifier in your request to the server.
+- Add a text field that allows users to specify their name as well as a
+  comment. If you want to go even farther, consider adding a way to filter
+  comments by the user that made them.
+- Add a dropdown box that allows users to add a mood (like happy or sad) to
+  their comments. Check out the HTML
+  [\<select\> tag](https://www.w3schools.com/tags/tag_select.asp) for this one.
+- Allow users to change the order that comments display: newest first, oldest
+  first, longest first, etc.
+- Improve error handling and security. What if a user enters HTML content or
+  JavaScript code in one of their comments? Try googling "HTML injection" or
+  "Cross-site scripting" for examples of why this might be an issue.
 
 To start the next set of projects, run the libraries walkthrough:
 

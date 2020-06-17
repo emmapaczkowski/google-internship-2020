@@ -34,7 +34,7 @@ contains input elements that let the user specify the data to send.
 To see an example, explore the `text-processor` directory and open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/text-processor/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 file. This file includes a form, which contains a text input, two checkboxes,
 and a submit button.
@@ -58,7 +58,7 @@ that maps to that URL, and then runs its `doPost()` function.
 Open the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/text-processor/src/main/java/com/google/sps/servlets/TextProcessorServlet.java">
-  TextProcessorServlet.java
+TextProcessorServlet.java
 </walkthrough-editor-open-file>
 file to see that code.
 
@@ -84,7 +84,7 @@ server.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/text-processor/src/main/java/com/google/sps/servlets/TextProcessorServlet.java">
-  TextProcessorServlet.java
+TextProcessorServlet.java
 </walkthrough-editor-open-file>
 file takes the input from the `POST` request and outputs it directly in the
 page as the response to that request.
@@ -108,12 +108,12 @@ webapp. Let's look at an example.
 
 Explore the `subtraction-game` directory to see an example that uses POST
 requests, redirects, GET requests, and JSON to implement the
-[subtraction game](https://en.wikipedia.org/wiki/Nim#The_subtraction_game_S\(1,_2,_._._.,_k\)).
+[subtraction game](<https://en.wikipedia.org/wiki/Nim#The_subtraction_game_S(1,_2,_._._.,_k)>).
 
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/subtraction-game/src/main/java/com/google/sps/servlets/SubtractionServlet.java">
-  SubtractionServlet.java
+SubtractionServlet.java
 </walkthrough-editor-open-file>
 file contains a `doPost()` function that takes user input and changes the state
 of the game, and a `doGet()` function that returns the current state of the
@@ -122,7 +122,7 @@ game.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/subtraction-game/src/main/webapp/index.html">
-  index.html
+index.html
 </walkthrough-editor-open-file>
 file contains HTML that includes a form that lets the user send a value to the
 server. The `<body>` element has an `onload` attribute that points to the
@@ -132,18 +132,18 @@ when the page loads.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-3-server/examples/subtraction-game/src/main/webapp/script.js">
-  script.js
+script.js
 </walkthrough-editor-open-file>
 file contains JavaScript that fetches the state of the game and builds the UI.
 
 All of these files work together to implement the subtraction game, and they
 demonstrate a common pattern:
 
--   The user loads a page.
--   The page contains a form that posts data to the server.
--   The server processes or stores the data.
--   The server redirects back to the same page.
--   The page gets the processed data from the server and builds a UI.
+- The user loads a page.
+- The page contains a form that posts data to the server.
+- The server processes or stores the data.
+- The server redirects back to the same page.
+- The page gets the processed data from the server and builds a UI.
 
 You can use this pattern to implement comments, and many other features!
 
@@ -156,7 +156,7 @@ probably want a text input for the user to add a comment.
 Then add a `doPost()` function to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/src/main/java/com/google/sps/servlets/DataServlet.java">
-  DataServlet.java
+DataServlet.java
 </walkthrough-editor-open-file>
 file that takes the data from the request to populate your comments data
 structure. An `ArrayList` of `String` values is fine.

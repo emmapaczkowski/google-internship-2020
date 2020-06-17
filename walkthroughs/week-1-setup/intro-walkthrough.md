@@ -38,7 +38,7 @@ more about these files throughout STEP, but for now try clicking around to
 explore. Try opening the
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-1-setup/intro-walkthrough.md">
-  intro-walkthrough.md
+intro-walkthrough.md
 </walkthrough-editor-open-file>
 file to view the source for this walkthrough!
 

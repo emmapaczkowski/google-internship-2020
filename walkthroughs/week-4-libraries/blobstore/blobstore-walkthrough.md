@@ -45,7 +45,7 @@ Blobstore comes with the App Engine environment, so to use Blobstore, first add
 the App Engine dependency to your
 <walkthrough-editor-open-file
     filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file:
 
@@ -103,7 +103,6 @@ happens when a user submits a form, without using Blobstore:
 [![client-server request](https://github.com/googleinterns/step/blob/master/walkthroughs/week-4-libraries/blobstore/blobstore-1.png?raw=true)
 ](https://github.com/googleinterns/step/blob/master/walkthroughs/week-4-libraries/blobstore/blobstore-1.png)
 
-
 Normally, the `action` of the form is a URL that maps to a servlet on the
 server. When the user submits the form, the servlet can get the values entered
 by the user through the `request.getParameter()` function, and can then store
@@ -118,7 +117,6 @@ by the user, including the URL of the file that Blobstore handled.
 [![client-blobstore request](https://github.com/googleinterns/step/blob/master/walkthroughs/week-4-libraries/blobstore/blobstore-2.png?raw=true)
 ](https://github.com/googleinterns/step/blob/master/walkthroughs/week-4-libraries/blobstore/blobstore-2.png)
 
-
 This extra step can be confusing, but it saves you all the work of parsing,
 storing, and hosting the file.
 
@@ -132,7 +130,7 @@ user to upload an image.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/blobstore/examples/hello-world/src/main/java/com/google/sps/servlets/HomeServlet.java">
-  HomeServlet.java
+HomeServlet.java
 </walkthrough-editor-open-file>
 file defines a `doGet()` function, which is triggered when users navigate to
 the `/home` URL. Generally you probably don't want to build HTML this way
@@ -161,7 +159,7 @@ In other words, the request is forwarded to the `FormHandlerServlet` class.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/blobstore/examples/hello-world/src/main/java/com/google/sps/servlets/FormHandlerServlet.java">
-  FormHandlerServlet.java
+FormHandlerServlet.java
 </walkthrough-editor-open-file>
 file has a `doPost()` function that's triggered when Blobstore forwards the
 request to the `/my-form-handler` URL. The `doPost()` function gets the value
@@ -213,7 +211,7 @@ It works like this:
 1.  The servlet inside the
     <walkthrough-editor-open-file
         filePath="step/walkthroughs/week-4-libraries/blobstore/examples/hello-world-fetch/src/main/java/com/google/sps/servlets/BlobstoreUploadUrlServlet.java">
-      BlobstoreUploadUrlServlet.java
+    BlobstoreUploadUrlServlet.java
     </walkthrough-editor-open-file>
     file maps to `/blobstore-upload-url`.
 2.  The `doGet()` function for that servlet calls the
@@ -223,7 +221,7 @@ It works like this:
 3.  On the client side, the
     <walkthrough-editor-open-file
         filePath="step/walkthroughs/week-4-libraries/blobstore/examples/hello-world-fetch/src/main/webapp/script.js">
-      script.js
+    script.js
     </walkthrough-editor-open-file>
     file uses the `fetch()` function to make a `GET` request to
     `/blobstore-upload-url`.
@@ -239,7 +237,7 @@ contains an example that takes this approach.
 The
 <walkthrough-editor-open-file
     filePath="step/walkthroughs/week-4-libraries/blobstore/examples/hello-world-jsp/src/main/webapp/index.jsp">
-  index.jsp
+index.jsp
 </walkthrough-editor-open-file>
 file runs on the server. The Java code at the top calls the
 `blobstoreService.createUploadUrl()` function, which it then embeds directly in
@@ -258,33 +256,33 @@ comments you implemented in week 2.
 Try to break this goal down into smaller steps, and then take each step on
 individually.
 
--   Add the App Engine dependency to your
-    <walkthrough-editor-open-file
-        filePath="step/portfolio/pom.xml">
-      pom.xml
-    </walkthrough-editor-open-file>
-    file.
--   Decide how you want to reference the Blobstore upload URL in your HTML:
-    either by outputting the HTML directly from a servlet, or by using
-    `fetch()`, or by using JSP.
--   Add a file upload input to your comments form.
-    -   Test that this works by running a dev server and inspecting the page. You
-        should see the Blobstore upload URL and file input in your HTML.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   Add a servlet that handles file upload requests. Remember: you should not
-    `POST` directly to this servlet! You should pass its URL into Blobstore, and
-    then handle the request after Blobstore processes it.
-    -   Test that this works by printing the file URL to the console.
-    -   When you get this step working, create a pull request and send it to
-        your host for review!
--   Add the file URL to the JSON returned by your comments servlet.
-    -   Test that this works by running a dev server and viewing the JSON in your
-        browser.
-    -   When you get this step working, create a pull request and send it to
-        your host for code review!
--   Add JavaScript code that reads the file URL from the JSON and displays it in
-    an `<img>` tag.
+- Add the App Engine dependency to your
+  <walkthrough-editor-open-file
+      filePath="step/portfolio/pom.xml">
+  pom.xml
+  </walkthrough-editor-open-file>
+  file.
+- Decide how you want to reference the Blobstore upload URL in your HTML:
+  either by outputting the HTML directly from a servlet, or by using
+  `fetch()`, or by using JSP.
+- Add a file upload input to your comments form.
+  - Test that this works by running a dev server and inspecting the page. You
+    should see the Blobstore upload URL and file input in your HTML.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- Add a servlet that handles file upload requests. Remember: you should not
+  `POST` directly to this servlet! You should pass its URL into Blobstore, and
+  then handle the request after Blobstore processes it.
+  - Test that this works by printing the file URL to the console.
+  - When you get this step working, create a pull request and send it to
+    your host for review!
+- Add the file URL to the JSON returned by your comments servlet.
+  - Test that this works by running a dev server and viewing the JSON in your
+    browser.
+  - When you get this step working, create a pull request and send it to
+    your host for code review!
+- Add JavaScript code that reads the file URL from the JSON and displays it in
+  an `<img>` tag.
 
 If you follow those steps, your portfolio should contain a working image upload
 feature!
@@ -296,7 +294,7 @@ you can deploy it to your live server!
 
 Your
 <walkthrough-editor-open-file filePath="step/portfolio/pom.xml">
-  pom.xml
+pom.xml
 </walkthrough-editor-open-file>
 file should already contain your project ID. If so, you can deploy to your live
 server by executing this command:
