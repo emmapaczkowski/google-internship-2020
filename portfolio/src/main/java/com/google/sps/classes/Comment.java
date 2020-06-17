@@ -14,15 +14,15 @@ public class Comment {
     }
 
     public String getMessage() {
-        return this.message;
+        return message;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public Date getTime() {
-        return this.time;
+        return time;
     }
 
 }

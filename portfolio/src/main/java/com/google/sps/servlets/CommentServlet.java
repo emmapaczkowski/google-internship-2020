@@ -85,14 +85,12 @@ public class CommentServlet extends HttpServlet {
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
     String value = request.getParameter(name);
-    value = (value == null) ? defaultValue : value;
-    return value;
+    return ((value == null) ? defaultValue : value);
   }
 
   private String convertToJsonUsingGson(List<Comment> commentList) {
     Gson gson = new Gson();
-    String json = gson.toJson(commentList);
-    return json;
+    return gson.toJson(commentList);
   }
 
 }
