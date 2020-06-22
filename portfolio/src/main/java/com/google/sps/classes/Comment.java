@@ -7,9 +7,9 @@ public class Comment {
     private String name;
     private Date time;
 
-    public Comment(String message, String name, Date time) {
-        this.message = message;
+    public Comment( String name, String message, Date time) {
         this.name = name;
+        this.message = message;
         this.time = time;
     }
 
