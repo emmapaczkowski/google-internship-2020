@@ -22,6 +22,11 @@ public class CountryServlet extends HttpServlet {
   
  @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    
+    Query query = new Query("Country");
+
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery result = datastore.prepare(query);
 
    
     }
@@ -29,11 +34,12 @@ public class CountryServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-     String theCountryName =  request.getParameter("country-input");
+     String countryName =  request.getParameter("country-input");
 
       Entity newCountry = new Entity("Country");
 
-      newCountry.setProperty("countryName", theCountryName);
+      newCountry.setProperty("countryName", countryName);
+      newCountry.setProperty("countryValue", 1);
 
       DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
       datastore.put(newCountry);

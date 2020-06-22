@@ -238,7 +238,7 @@ var kingstonMarker = new google.maps.Marker({
             ['Brazil', 400],
             ['Canada', 500],
             ['France', 600],
-            ['RU', 700]
+            ['RU', 900]
             ]);
 
             var options = {};
