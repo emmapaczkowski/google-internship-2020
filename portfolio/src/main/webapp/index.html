@@ -13,9 +13,10 @@
          <button onclick="closeSidebar()" class="w3-bar-item w3-large">
          Close &times;
          </button>
-         <a href="#" class="w3-bar-item w3-button">About </a>
-         <a href="#" class="w3-bar-item w3-button">Where Should I Travel?</a>
-         <a href="#" class="w3-bar-item w3-button">Hobbies</a>
+         <a href="#anchor-about" class="w3-bar-item w3-button">About </a>
+         <a href="#anchor-hobbies" class="w3-bar-item w3-button">Hobbies</a>
+         <a href="#anchor-travel" class="w3-bar-item w3-button">Where Should I Travel?</a>
+         <a href="#anchor-comments" class="w3-bar-item w3-button">Comments</a>
       </div>
       <div class="w3-teal">
          <button class="w3-button w3-teal w3-xlarge" onclick="openSidebar()">
@@ -38,7 +39,7 @@
          <button onclick="fetchList()">Click here</button>
          <div id="places-lived-container"></div>
       </div>
-      <h3>About</h3>
+      <h3 id="anchor-about">About</h3>
       <p>I am 19 years old and am from a small town in Canada.  I am about to go into my 3rd year of Computer engineering at Queen’s University.  When I am not busy in school I enjoy spending time outside, playing my violin, playing games and learning about the different places in the world.</p>
       <p>Guess what my favourite animal is</p>
       <button onclick="displayImage()">Answer</button>
@@ -57,7 +58,7 @@
       </head>
       <div id="map"></div>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initMap" async defer></script>
-       <h3>Hobbies</h3>
+       <h3 id="anchor-hobbies">Hobbies</h3>
       <h6>
          In my free time I thoroughly enjoy spending time outside. Some of my favourite activities include hiking, mountain hiking and cross country skiing.
       </h6>
@@ -72,7 +73,7 @@
             <img src="/images/slideshow/skiing.JPG" alt="Cross Country Skiing" style="width: 100%;" />
          </div>
       </div>
-       <h3>Where Should I Travel?</h3>
+       <h3 id="anchor-travel">Where Should I Travel?</h3>
       <p> Over the course of the past couple years I have had an interest in learning about all the different countries in the world. Fortunately, I have had the opportunity to travel to a few but I would like to travel to more.  Please enter which countries I should learn more about or travel to.  Based on other users input you can see which countries have the most votes by how dark they are!</p>
       <div id="geo-chart" ></div>
       <script src="https://www.gstatic.com/charts/loader.js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initGeoChart" async defer></script>
@@ -87,7 +88,7 @@
          &nbsp;&nbsp;
          &nbsp;&nbsp;
          &nbsp;&nbsp;
-         <h3>Comments Form</h3>
+         <h3 id="anchor-comments">Comments Form</h3>
          <p>Let me know where you have traveled and tell me somthing exciting to do there!</p>
          &nbsp;&nbsp;
          <form action="/add-comment" method="POST">
