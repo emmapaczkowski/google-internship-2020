@@ -235,12 +235,15 @@ var kingstonMarker = new google.maps.Marker({
         function drawRegionsMap() {
             var data = google.visualization.arrayToDataTable([
             ['Country', 'Popularity'],
-            ['Germany', 200],
-            ['United States', 300],
-            ['Brazil', 400],
-            ['Canada', 500],
-            ['France', 600],
-            ['RU', 700]
+            ['Canada', 6],
+            ['United States', 2],
+            ['Switzerland', 4],
+            ['South Korea', 1],
+            ['France', 1],
+            ['RU', 5],
+            ['Mexico', 3],
+            ['Costa Rica', 2],
+            ['United Kingdom', 3],
             ]);
 
             var options = {};
