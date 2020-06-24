@@ -57,17 +57,7 @@
       </head>
       <div id="map"></div>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initMap" async defer></script>
-       <h3>Where Should I Travel?</h3>
-      <p> Over the course of the past couple years I have had an interest in learning about all the different countries in the world. Fortunately, I have had the opportunity to travel to a few but I would like to travel to more.  Please enter which countries I should learn more about or travel to.  Based on other users input you can see which countries have the most votes by how dark they are!</p>
-      <div id="geo-chart" ></div>
-      <script src="https://www.gstatic.com/charts/loader.js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initGeoChart" async defer></script>
-      <form action="/geo-chart" method="POST">
-         <label for="country-input">Country</label></br>
-         <input type="text" name="country-input" placeholder="Country"></br></br>
-         <input class="submit-btn" type="submit" value="Submit Country"/></br></br>
-      </form>
-      &nbsp;&nbsp;
-      <h3>Hobbies</h3>
+       <h3>Hobbies</h3>
       <h6>
          In my free time I thoroughly enjoy spending time outside. Some of my favourite activities include hiking, mountain hiking and cross country skiing.
       </h6>
@@ -82,6 +72,16 @@
             <img src="/images/slideshow/skiing.JPG" alt="Cross Country Skiing" style="width: 100%;" />
          </div>
       </div>
+       <h3>Where Should I Travel?</h3>
+      <p> Over the course of the past couple years I have had an interest in learning about all the different countries in the world. Fortunately, I have had the opportunity to travel to a few but I would like to travel to more.  Please enter which countries I should learn more about or travel to.  Based on other users input you can see which countries have the most votes by how dark they are!</p>
+      <div id="geo-chart" ></div>
+      <script src="https://www.gstatic.com/charts/loader.js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initGeoChart" async defer></script>
+      <form action="/geo-chart" method="POST">
+         <label for="country-input">Country</label></br>
+         <input type="text" name="country-input" placeholder="Country"></br></br>
+         <input class="submit-btn" type="submit" value="Submit Country"/></br></br>
+      </form>
+      &nbsp;&nbsp;
       <div class="comment-section">
          &nbsp;&nbsp;
          &nbsp;&nbsp;
