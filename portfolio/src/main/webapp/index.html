@@ -14,7 +14,7 @@
          Close &times;
          </button>
          <a href="#" class="w3-bar-item w3-button">About </a>
-         <a href="#" class="w3-bar-item w3-button">Interests</a>
+         <a href="#" class="w3-bar-item w3-button">Where Should I Travel?</a>
          <a href="#" class="w3-bar-item w3-button">Hobbies</a>
       </div>
       <div class="w3-teal">
@@ -39,6 +39,15 @@
          <div id="places-lived-container"></div>
       </div>
       <h3>About</h3>
+      <p>I am 19 years old and am from a small town in Canada.  I am about to go into my 3rd year of Computer engineering at Queen’s University.  When I am not busy in school I enjoy spending time outside, playing my violin, playing games and learning about the different places in the world.</p>
+      <p>Guess what my favourite animal is</p>
+      <button onclick="displayImage()">Answer</button>
+      <div id="fav_animal">
+         <img src="/images/chicken.JPG" alt="Chicken" style="width: 20%;" />
+         <p>It is a chicken! This is my chicken, her name is Sprocket.</p>
+      </div>
+      &nbsp;&nbsp;
+      &nbsp;&nbsp; 
       <h6>These are the different places I have lived</h6>
       <p>Click on the pins to learn more!</p>
       <head>
@@ -48,6 +57,7 @@
       </head>
       <div id="map"></div>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initMap" async defer></script>
+       <h3>Where Should I Travel?</h3>
       <p> Over the course of the past couple years I have had an interest in learning about all the different countries in the world. Fortunately, I have had the opportunity to travel to a few but I would like to travel to more.  Please enter which countries I should learn more about or travel to.  Based on other users input you can see which countries have the most votes by how dark they are!</p>
       <div id="geo-chart" ></div>
       <script src="https://www.gstatic.com/charts/loader.js?key=AIzaSyBCPz2-Fuq6F7AAPq5LslBkTYvvqZIGwQM&callback=initGeoChart" async defer></script>
@@ -57,18 +67,6 @@
          <input class="submit-btn" type="submit" value="Submit Country"/></br></br>
       </form>
       &nbsp;&nbsp;
-      <p>Guess what my favourite animal is</p>
-      <button onclick="displayImage()">Answer</button>
-      <div id="fav_animal">
-         <img src="/images/chicken.JPG" alt="Chicken" style="width: 20%;" />
-         <p>It is a chicken! This is my chicken, her name is Sprocket.</p>
-      </div>
-      <h3>Interests</h3>
-      <p>
-         I have just finished my second year of computer engineering at Queen’s University where I have had the opportunity to explore my interest in many fields. Throughout high school I was interested in space technology and over the past
-         two years I have furthered my curiosity as a member of my Universities Space EngineeringTeam where we work on developing a 3-unite cube satellite. I have been involved with both the communication team as well as the additude
-         termination control system. I am also interested in environmental conservation and sustainability and seeing how technology can assist in different sustainability initiatives.
-      </p>
       <h3>Hobbies</h3>
       <h6>
          In my free time I thoroughly enjoy spending time outside. Some of my favourite activities include hiking, mountain hiking and cross country skiing.

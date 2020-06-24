@@ -140,8 +140,8 @@ var PGContent = '<div id="content">' +
   '</div>' +
   '<h1 id="firstHeading" class="firstHeading">Prince George, B.C.</h1>' +
   '<div id="bodyContent">' +
-  '<p><b>Prince George</b>, is a small city located in notherb British Columbia.'+
-  ' I has born here in 2000 and spent the first 2 years of my lie in the city' + '</p>'
+  '<p><b>Prince George</b>, is a small city located in nothern British Columbia.'+
+  ' I was born here in 2000 and spent the first 2 years of my life in the city.' + '</p>'
  '</div>' +
  '</div>';
  var canmoreContent = '<div id="content">' +
@@ -149,7 +149,7 @@ var PGContent = '<div id="content">' +
   '</div>' +
   '<h1 id="firstHeading" class="firstHeading">Canmore, Alberta</h1>' +
   '<div id="bodyContent">' +
-  '<p><b>Canmore</b>, is a small town located in the Alberta Rocky Mountians Since I have been two this has been my main home' + '</p>'
+  '<p><b>Canmore</b>, is a small town located in the Alberta Rocky Mountians. Since I have been two this has been my main home.' + '</p>'
  '</div>' +
  '</div>';
  var kamchatkaContent = '<div id="content">' +
