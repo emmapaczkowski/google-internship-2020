@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public final class FindMeetingQuery {
+  private ArrayList<TimeRange> unavailableTimes = new ArrayList<TimeRange>();
+
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
   
   int requestDuration = (int) request.getDuration();
@@ -41,14 +43,12 @@ public final class FindMeetingQuery {
     return Arrays.asList(TimeRange.WHOLE_DAY);
   }
 
-  ArrayList<TimeRange> unavailableTimes = new ArrayList<TimeRange>();
-
-  for(int i=0 ; i < events.length() ; i++) {
+  for(int i=0 ; i < events.size() ; i++) {
     ArrayList<String> requiredAttendees = new ArrayList<String>();
     requiredAttendees = request.getAttendees();
     boolean isRequired == false 
     while(isvalid == false) {
-      for(int j=0 ; j<requiredAttendees.length() ; j++) {
+      for(int j=0 ; j<requiredAttendees.size() ; j++) {
         if(events[i].attendees.contain(requiredAttendees[j]) {
           isRequired = true;
           addUnavailableTime(event[i].when);
@@ -59,9 +59,38 @@ public final class FindMeetingQuery {
 
   }
 
-  public void addUnavailableTime(TimeRange time) {
-      //you need to finish this function
   }
+  }
+   //Add times to an array of unaavalible times, sorting them while doing so.
+   public void addUnavailableTime(TimeRange time) {
+     if (unavailableTimes.isEmpty() == true) {
+       unavailableTimes.add(time);
+       return;
+     }
+     else {
+       int i = 0;
+       while( i<unavailableTimes.size()){
+         //if the start time is greater that the current element keep going
+         if(unavailableTimes[i].start()<time.start()){
+           i++;
+         }
+         //if they are equal then sort them in inserasin order based on duration
+         elseif(unavailableTimes[i].start()==time.start()) {
+           if (unavailableTimes[i].duration > time.duration()) {
+             unavailableTimes(i,time)   
+             return; 
+           }
+           else {
+             i++;
+           }
+         }
+         else {
+           unavailableTimes.add(i,time);
+           return;
+         } 
+       }
+     }
+   }
 
-  }
+   //YOU STILL NEED A FUNCTION TO GO THROUGH  UNAVALIBLE TIMES AN GET THE AVALIBLE ONES
 }
