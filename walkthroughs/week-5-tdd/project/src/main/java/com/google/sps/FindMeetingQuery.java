@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.Iterator;
 
@@ -39,18 +40,22 @@ public final class FindMeetingQuery {
   }
 
   //itterate through events to find all that have a conflic with a required attendee.
-  //Add those events to the unavailable
+  //Add those events to the unavailableTimes array.
   ArrayList<String> requiredAttendees = new ArrayList<>(request.getAttendees());
-  for(int i=0 ; i<events.size() ; i++) {
+  for (Iterator<Event> iterator = events.iterator(); iterator.hasNext();) {
     for(int j=0 ; j<requiredAttendees.size() ; j++) {
-      if(events.get(i).getAttendees.contain(requiredAttendees.get(j))) {
-        addUnavailableTime(event[i].when);
+      
+      Event cur = new Event(iterator.next().getTitle(), iterator.next().getWhen(), iterator.next().getAttendees());
+      
+      Set<String> curAttendees = new HashSet<>();
+      curAttendees = cur.getAttendees();
+      if(curAttendees.contains(requiredAttendees.get(j))) {
+        addUnavailableTime(cur.getWhen());
         break;
       }
     }
   }
-  Collection<TimeRange> answer = findAvalibleTimes(unavailableTimes, when);
-  return(answer);
+  return(findAvalibleTimes(request.getDuration()));
   }
 
 
@@ -63,15 +68,15 @@ public final class FindMeetingQuery {
        int i = 0;
        while( i<unavailableTimes.size()){
          //if the start time is greater that the current element keep going
-         if(unavailableTimes[i].start()<time.start()) {
+         if(unavailableTimes.get(i).start()<time.start()) {
            i++;
          }
          //if they are equal then keep the one with the longer duration
-         else if(unavailableTimes[i].start()==time.start() && unavailableTimes[i].duration < time.duration()) {
+         else if(unavailableTimes.get(i).start()==time.start() && unavailableTimes.get(i).duration() < time.duration()) {
              unavailableTimes.set(i,time);  
              return; 
          }
-         else if(unavailableTimes[i].start()==time.start() && unavailableTimes[i].duration > time.duration()) {
+         else if(unavailableTimes.get(i).start()==time.start() && unavailableTimes.get(i).duration() > time.duration()) {
            i++;
          }
          else {
@@ -82,20 +87,19 @@ public final class FindMeetingQuery {
    }
 
   //Itterate through the unavalible times and find the avalible times that work
-  public Collection<TimeRange> findAvalibleTimes( ArrayList<TimeRange> unavailable, TimeRange requiredTime) {
-    if( unavailable.isEmpty() == true) {
-       Collection.emptyList();
+  public Collection<TimeRange> findAvalibleTimes(long requiredTime) {
+    if( unavailableTimes.isEmpty() == true) {
+        return (unavailableTimes);    
     }
     else {
-     unavailable.set(0,TimeRange(START_OF_DAY, 0));
-     unavailable.add(END_OF_DAY, 0);
+     unavailableTimes.set(0,(TimeRange.fromStartDuration(TimeRange.START_OF_DAY, 0)));
+     unavailableTimes.add(TimeRange.fromStartDuration(TimeRange.END_OF_DAY, 0));
     }
-    List<TimeRange> avalible = new ArrayList<TimeRange>();
+    List<TimeRange> available = new ArrayList<TimeRange>();
     for(int i=0 ; i<unavailableTimes.size()-1 ; i++) {
-      int curDuration = unavailable.get(i+1).start() - unavailable.get(i).end();
-       TimeRange currentTimeRange = new TimeRange(unavailable[i].end(), curDuration);
-        if(currentTimeRange.duration() >= requiredTime.duration()) {
-            available.add(currentTimeRange);
+      int curDuration = unavailableTimes.get(i+1).start() - unavailableTimes.get(i).end();
+        if(curDuration >= requiredTime) {
+            available.add(TimeRange.fromStartDuration(unavailableTimes.get(i).end(), curDuration));
         }
     }
     return (available);  
