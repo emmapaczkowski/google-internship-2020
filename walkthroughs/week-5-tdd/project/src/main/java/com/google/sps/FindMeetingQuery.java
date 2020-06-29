@@ -14,15 +14,17 @@
 
 package com.google.sps;
 
-import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Iterator;
 
 public final class FindMeetingQuery {
-  private ArrayList<TimeRange> unavailableTimes = new ArrayList<TimeRange>();
+  public ArrayList<TimeRange> unavailableTimes = new ArrayList<TimeRange>();
 
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
 
@@ -30,34 +32,27 @@ public final class FindMeetingQuery {
   if(request.getDuration() > TimeRange.WHOLE_DAY.duration()) {
     return Collections.emptyList();
   }
-
-  //if the event time is zero or the number of attendees is zero, the whole day is avalible 
-  if(reqest.getDuration() == 0 || request.getAttendees.size() == 0) {
-    return Arrays.asList(TimeRange.WHOLE_DAY);
-  }
-
+ 
   //if there are no events and the request is less than a say, then return the whole day
   if(events.isEmpty() && request.getDuration() <= TimeRange.WHOLE_DAY.duration()) {
     return Arrays.asList(TimeRange.WHOLE_DAY);
   }
 
   //itterate through events to find all that have a conflic with a required attendee.
-  //Add thosew events to the unabalible collection
-  Collection<String> requiredAttendees = request.getAttendees();
+  //Add those events to the unavailable
+  ArrayList<String> requiredAttendees = new ArrayList<>(request.getAttendees());
   for(int i=0 ; i<events.size() ; i++) {
-    boolean isRequired == false;
-    whileLoop: while(isRequired == false) {
-      for(Iterator<String> iterator= collection.iterator(); iterator.hasNext();) {
-        if(events[i].attendees.contain(requirgit edAttendees[j]) {
-          isRequired = true;
-          addUnavailableTime(event[i].when);
-          break whileLoop;
-        }
+    for(int j=0 ; j<requiredAttendees.size() ; j++) {
+      if(events.get(i).getAttendees.contain(requiredAttendees.get(j))) {
+        addUnavailableTime(event[i].when);
+        break;
       }
     }
   }
-  return(availableTime(unavailableTimes, when));
+  Collection<TimeRange> answer = findAvalibleTimes(unavailableTimes, when);
+  return(answer);
   }
+
 
    //Add times to an array of unaavalible times, sorting them while doing so.
    public void addUnavailableTime(TimeRange time) {
@@ -65,50 +60,45 @@ public final class FindMeetingQuery {
        unavailableTimes.add(time);
        return;
      }
-     else {
        int i = 0;
        while( i<unavailableTimes.size()){
          //if the start time is greater that the current element keep going
-         if(unavailableTimes[i].start()<time.start()){
+         if(unavailableTimes[i].start()<time.start()) {
            i++;
          }
          //if they are equal then keep the one with the longer duration
-         elseif(unavailableTimes[i].start()==time.start()) {
-           if (unavailableTimes[i].duration < time.duration()) {
-             //replace with the larger duration
-             unavailableTimes.set(i,time)   
+         else if(unavailableTimes[i].start()==time.start() && unavailableTimes[i].duration < time.duration()) {
+             unavailableTimes.set(i,time);  
              return; 
-           }
-           else {
-             i++;
-           }
+         }
+         else if(unavailableTimes[i].start()==time.start() && unavailableTimes[i].duration > time.duration()) {
+           i++;
          }
          else {
            unavailableTimes.add(i,time);
            return;
          } 
        }
-     }
    }
 
   //Itterate through the unavalible times and find the avalible times that work
-  public Collection<TimeRange> avalibleTimes( ArrayList<TimeRange> unavailable, TimeRange requiredTime) {
+  public Collection<TimeRange> findAvalibleTimes( ArrayList<TimeRange> unavailable, TimeRange requiredTime) {
     if( unavailable.isEmpty() == true) {
-      return Collections.emptyList();
+       Collection.emptyList();
     }
     else {
      unavailable.set(0,TimeRange(START_OF_DAY, 0));
      unavailable.add(END_OF_DAY, 0);
     }
-
     List<TimeRange> avalible = new ArrayList<TimeRange>();
     for(int i=0 ; i<unavailableTimes.size()-1 ; i++) {
-       TimeRange currentTimeRange (unavailable[i].end(), unavailable[i+1].start());
+      int curDuration = unavailable.get(i+1).start() - unavailable.get(i).end();
+       TimeRange currentTimeRange = new TimeRange(unavailable[i].end(), curDuration);
         if(currentTimeRange.duration() >= requiredTime.duration()) {
             available.add(currentTimeRange);
         }
     }
-    return (Collection ans = available);  
+    return (available);  
   }
 
 }
