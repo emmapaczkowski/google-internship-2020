@@ -57,6 +57,11 @@ public final class FindMeetingQuery {
         }
     }
 
+    // Check for valid events during the day
+    if (mandatoryEvents.isEmpty() && withOptionalEvents.isEmpty()) {
+        return Arrays.asList((TimeRange.WHOLE_DAY)); 
+    }
+
 
 
 
