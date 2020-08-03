@@ -32,7 +32,6 @@ public final class FindMeetingQuery {
   // the meeting request
   private MeetingRequest request; 
 
-  // public ArrayList <TimeRange> unavailableTimes = new ArrayList < imeRange> ();
   public Collection <TimeRange> query(Collection <Event> events, MeetingRequest request) {
 
     this.events = events;
