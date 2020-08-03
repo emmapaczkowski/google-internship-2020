@@ -49,6 +49,7 @@ public final class FindMeetingQueryTest {
   private static final int DURATION_90_MINUTES = 90;
   private static final int DURATION_1_HOUR = 60;
   private static final int DURATION_2_HOUR = 120;
+  private static final int DURATION_WHOLE_DAY = 1440;
 
   private FindMeetingQuery query;
 
