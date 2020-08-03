@@ -62,7 +62,7 @@ public final class FindMeetingQuery {
         return Arrays.asList((TimeRange.WHOLE_DAY)); 
     }
 
-     // Get list of options for all mandatory and optional attendees
+    // list of options for all mandatory and optional attendees
     List<TimeRange> optionsForAll = getOptions(withOptionalEvents); 
 
     if (optionsForAll.isEmpty()) {
@@ -71,6 +71,11 @@ public final class FindMeetingQuery {
         return optionsForMandatory;
     }
     return optionsForAll; 
+  }
+
+  /** Creates list of options for meeting time*/
+  public List<TimeRange> getOptions(List<TimeRange> collection) { 
+
   }
 
 
