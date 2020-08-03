@@ -83,6 +83,22 @@ public final class FindMeetingQuery {
     int start = TimeRange.START_OF_DAY;
     int lastEventEnd = 0;
 
+     for (TimeRange event: collection) {
+        // Get event start and end time
+        int eventStart = event.start();
+        int eventEnd = event.end(); 
+
+        // Check for overlap
+        if (start < eventStart) {
+            // Check if there is enough room for a meeting
+            if ((eventStart - start) >= request.getDuration()) {
+                options.add(TimeRange.fromStartEnd(start,eventStart,false)); 
+            }
+        }  
+        start = Math.max(start, eventEnd);
+        lastEventEnd = start;
+    } 
+
   }
 
 
