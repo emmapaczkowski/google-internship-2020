@@ -26,7 +26,7 @@ import java.util.Iterator;
 
 public final class FindMeetingQuery {
 
-   // create a set of events to avoid duplicates
+   // Set of events to avoid duplicates
   private Collection<Event> events = new HashSet<>();
 
   // the meeting request
