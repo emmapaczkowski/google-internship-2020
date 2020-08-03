@@ -25,8 +25,19 @@ import java.util.stream.Collectors;
 import java.util.Iterator;
 
 public final class FindMeetingQuery {
-  // public ArrayList < TimeRange > unavailableTimes = new ArrayList < TimeRange > ();
-  public Collection < TimeRange > query(Collection < Event > events, MeetingRequest request) {
+
+   // create a set of events to avoid duplicates
+  private Collection<Event> events = new HashSet<>();
+
+  // the meeting request
+  private MeetingRequest request; 
+
+  // public ArrayList <TimeRange> unavailableTimes = new ArrayList < imeRange> ();
+  public Collection <TimeRange> query(Collection <Event> events, MeetingRequest request) {
+
+    this.events = events;
+    this.request = request; 
+
     //if the duration of the meeting is over a day, there are no available times
     if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) {
       return Collections.emptyList();
@@ -37,10 +48,10 @@ public final class FindMeetingQuery {
     }
 
     // Arraylist to hold event times with all mandatory attendees    
-    List < TimeRange > mandatoryEvents = new ArrayList();
+    List <TimeRange> mandatoryEvents = new ArrayList();
 
     // Arraylist to hold event times with all attendees, mandatory and optional
-    List < TimeRange > withOptionalEvents = new ArrayList();
+    List <TimeRange> withOptionalEvents = new ArrayList();
     for (Event event: events) {
       // Check if attendees from event are requested for meeting
       for (String attendee: event.getAttendees()) {
@@ -62,21 +73,21 @@ public final class FindMeetingQuery {
     }
 
     // list of options for all mandatory and optional attendees
-    List < TimeRange > optionsForAll = getOptions(withOptionalEvents);
+    List <TimeRange> optionsForAll = getOptions(withOptionalEvents);
 
     if (optionsForAll.isEmpty()) {
       // Get list of options for only mandatory attendees
-      List < TimeRange > optionsForMandatory = getOptions(mandatoryEvents);
+      List <TimeRange> optionsForMandatory = getOptions(mandatoryEvents);
       return optionsForMandatory;
     }
     return optionsForAll;
   }
 
   /** Creates list of options for meeting time*/
-  public List < TimeRange > getOptions(List < TimeRange > collection) {
+  public List <TimeRange> getOptions(List <TimeRange> collection) {
 
     // Create empty Arraylist of options
-    List < TimeRange > options = new ArrayList();
+    List <TimeRange> options = new ArrayList();
     // Sort list of time ranges in ascending order
     Collections.sort(collection, TimeRange.ORDER_BY_START);
     int start = TimeRange.START_OF_DAY;
@@ -109,6 +120,7 @@ public final class FindMeetingQuery {
     }
     return options;
   }
+}
 
 
 
